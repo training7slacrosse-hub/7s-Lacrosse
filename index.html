@@ -976,10 +976,11 @@
 
     <div class="nav__links">
       <a class="nav__link" href="#" onclick="showPage('home')">Home</a>
-      <a class="nav__link" href="#" onclick="showPage('training')">Services</a>
-      <a class="nav__link" href="#" onclick="showPage('pricing')">Prices</a>
+      <a class="nav__link" href="#" onclick="showPage('training')">Coaching Services</a>
+      <a class="nav__link" href="#" onclick="showPage('pricing')">Pricing</a>
       <a class="nav__link" href="#" onclick="showPage('online')">Online Coaching</a>
       <a class="nav__link" href="#" onclick="showPage('about')">About</a>
+      <a class="nav__link" href="#" onclick="showPage('testimonials')">Testimonials</a>
       <a class="nav__link" href="#" onclick="showPage('faq')">FAQ</a>
       <a class="btn btn-primary nav__cta" href="#" onclick="showPage('request')">Request Training</a>
     </div>
@@ -991,10 +992,11 @@
 
   <div class="nav__mobile" id="mobileMenu">
     <a class="nav__link" href="#" onclick="showPage('home');closeMenu()">Home</a>
-    <a class="nav__link" href="#" onclick="showPage('training');closeMenu()">Services</a>
-    <a class="nav__link" href="#" onclick="showPage('pricing');closeMenu()">Prices</a>
+    <a class="nav__link" href="#" onclick="showPage('training');closeMenu()">Coaching Services</a>
+    <a class="nav__link" href="#" onclick="showPage('pricing');closeMenu()">Pricing</a>
     <a class="nav__link" href="#" onclick="showPage('online');closeMenu()">Online Coaching</a>
     <a class="nav__link" href="#" onclick="showPage('about');closeMenu()">About</a>
+    <a class="nav__link" href="#" onclick="showPage('testimonials');closeMenu()">Testimonials</a>
     <a class="nav__link" href="#" onclick="showPage('faq');closeMenu()">FAQ</a>
     <a class="btn btn-primary" href="#" onclick="showPage('request');closeMenu()">Request Training</a>
   </div>
@@ -1010,216 +1012,188 @@
      ============================================================ -->
 <div class="page active" id="page-home">
 
-  <!-- HERO -->
+  <!-- ── HERO ───────────────────────────────────────────────── -->
   <section class="hero">
     <div class="container hero__inner">
       <h1 class="hero-title">
-        <span>Lacrosse Player</span>
-        <span class="gradient-text">Development</span>
-        <img class="hero-title-logo" src="images/logo.jpeg" alt="7s Lacrosse" />
+        <span>Structured and Personalized</span>
+        <span class="gradient-text">Lacrosse Player</span>
+        <span>Development</span>
       </h1>
-      <p class="hero__sub">7s Lacrosse helps student-athletes develop their skill, speed, strength, and game IQ much faster than on their own or through large group practices. 7s Lacrosse provides a Total Performance training system both in person and online.</p>
+      <p class="hero__sub">Structured lacrosse, speed, strength, and IQ training for youth and high school players ages 8–18.</p>
       <div class="hero__buttons">
         <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Training</a>
-        <a class="btn btn-outline" href="#" onclick="showPage('training')">View Training Options</a>
+        <a class="btn btn-outline" href="#" onclick="showPage('training')">View Services</a>
+        <a class="btn btn-outline" href="#" onclick="showPage('pricing')">See Pricing</a>
       </div>
-      <div class="hero__tags">
-        <span class="hero__tag">Private Training</span>
-        <span class="hero__tag">Small Groups</span>
-        <span class="hero__tag">Strength &amp; Speed</span>
-        <span class="hero__tag">Online Coaching</span>
-      </div>
-      <p class="hero__location mt-4"><strong>In-person:</strong> Central NJ — end of May through August &amp; winter break &nbsp;|&nbsp; <strong>Online coaching:</strong> Year-round</p>
+      <p class="hero__location" style="margin-top:20px"><strong>In-person:</strong> NJ — Summer &amp; winter break &nbsp;|&nbsp; <strong>Online coaching:</strong> Year-round</p>
     </div>
   </section>
 
-  <!-- STATS BAR -->
+  <!-- ── STATS BAR ──────────────────────────────────────────── -->
   <div class="stats-bar">
     <div class="container stats-bar__inner">
-      <div>
-        <div class="stat__num">57<span>G</span></div>
-        <div class="stat__label">Goals in 2026</div>
-      </div>
       <div>
         <div class="stat__num">15<span>+</span></div>
         <div class="stat__label">Years of Experience</div>
       </div>
       <div>
-        <div class="stat__num">8–18</div>
-        <div class="stat__label">Ages Trained</div>
+        <div class="stat__num">7<span>+</span></div>
+        <div class="stat__label">Years of Coaching Youth</div>
       </div>
       <div>
-        <div class="stat__num">7<span>+</span></div>
-        <div class="stat__label">Years Coaching Clinics</div>
+        <div class="stat__num" style="font-size:clamp(13px,1.8vw,22px);line-height:1.2">2026 USA Lacrosse<span style="display:block">Magazine</span></div>
+        <div class="stat__label">All-American Nominee</div>
+      </div>
+      <div>
+        <div class="stat__num" style="font-size:clamp(14px,1.8vw,24px);line-height:1.2">26–27 Season</div>
+        <div class="stat__label">Team Captain</div>
       </div>
     </div>
   </div>
 
-  <!-- WHAT IS 7s -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <span class="label">What Is 7s Lacrosse</span>
-        <h2>More Than<br />Lacrosse Lessons</h2>
-        <p>7s Lacrosse is a lacrosse training company for student-athletes who want to improve their skill, athleticism, confidence, and understanding of the game. Training focuses on the full development of the player — stick skills, shooting, footwork, speed, strength, movement, lacrosse IQ, and game habits.</p>
-      </div>
-      <div class="cards-grid" style="grid-template-columns:repeat(4,1fr)">
-        <div class="card"><div class="card__icon">🥍</div><h4>Stick Skills</h4><p>Catching, throwing, shooting, dodging, and stick protection from every angle.</p></div>
-        <div class="card"><div class="card__icon">⚡</div><h4>Speed &amp; Agility</h4><p>Acceleration, deceleration, change of direction, and movement quality.</p></div>
-        <div class="card"><div class="card__icon">💪</div><h4>Strength</h4><p>Safe, age-appropriate strength habits that translate directly to the field.</p></div>
-        <div class="card"><div class="card__icon">🧠</div><h4>Lacrosse IQ</h4><p>Off-ball movement, positioning, game habits, and understanding why things work.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRAINING OPTIONS -->
-  <section class="section section--dark">
-    <div class="container">
-      <div class="section-header">
-        <span class="label">Training Options</span>
-        <h2>Built for Every Athlete</h2>
-        <p>Choose the training format that fits the athlete's goals, schedule, and style.</p>
-      </div>
-      <div class="cards-grid">
-        <div class="card card--highlight">
-          <div class="card__icon">🎯</div>
-          <h4>Private Lacrosse Training</h4>
-          <p>Focused one-on-one coaching for athletes who want individual attention and specific skill development.</p>
-          <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPage('training')">Learn more →</a></div>
-        </div>
-        <div class="card">
-          <div class="card__icon">👥</div>
-          <h4>Small Group Training</h4>
-          <p>Competitive training for siblings, friends, teammates, or parent-organized groups with game-like reps.</p>
-          <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPage('training')">Learn more →</a></div>
-        </div>
-        <div class="card">
-          <div class="card__icon">🏃</div>
-          <h4>Strength, Speed &amp; Agility</h4>
-          <p>Athletic development focused on movement quality, coordination, body control, and safe strength habits.</p>
-          <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPage('training')">Learn more →</a></div>
-        </div>
-        <div class="card card--highlight">
-          <div class="card__icon">🔥</div>
-          <h4>7s Lacrosse Total Performance</h4>
-          <p>The most complete option. Lacrosse skill work combined with strength, speed, agility, and conditioning habits.</p>
-          <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPage('training')">Learn more →</a></div>
-        </div>
-        <div class="card">
-          <div class="card__icon">💻</div>
-          <h4>Online Coaching</h4>
-          <p>Year-round structure: wall ball plans, workouts, video review, check-ins, and tryout preparation.</p>
-          <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPage('online')">Learn more →</a></div>
-        </div>
-        <div class="card">
-          <div class="card__icon">🥅</div>
-          <h4>Position-Aware Training</h4>
-          <p>Sessions are adjusted based on each athlete's position and role. Drills, habits, and skill work are tailored to how they play the game.</p>
-          <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPage('training')">Learn more →</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHO IT'S FOR -->
+  <!-- ── APPROACH / METHODOLOGY ────────────────────────────── -->
   <section class="section">
     <div class="container">
       <div class="trust">
         <div>
+          <span class="label">The 7s Lacrosse Approach</span>
+          <h2>Structured Training.<br />Clear Progress.<br />Real Development.</h2>
+          <p style="color:var(--silver-mid);font-size:17px;line-height:1.75;margin-top:20px">Sevens Lacrosse is not built around random drills. Every session has a purpose. Athletes work on specific skills, learn why those skills matter, and build habits that carry into games.</p>
+          <p style="color:var(--silver-mid);font-size:17px;line-height:1.75;margin-top:14px">Training sessions can include stick skills, shooting, passing, dodging, footwork, speed, agility, strength habits, lacrosse IQ. Sessions always include confidence building! Home practice is assigned between sessions.</p>
+          <p style="color:var(--silver-mid);font-size:17px;line-height:1.75;margin-top:14px">Players can be evaluated through the proprietary <strong style="color:var(--silver)">7s Player Progression System</strong> — a structured approach that helps athletes and parents understand current ability, areas for improvement, and the next step in development.</p>
+          <div style="margin-top:28px">
+            <a class="btn btn-outline" href="#" onclick="showPage('training')">Learn More</a>
+          </div>
+        </div>
+        <img src="images/one-on-one-training.png" alt="One-on-one lacrosse training session" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TRAINING OPTIONS ───────────────────────────────────── -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <span class="label">Training Options</span>
+        <h2>Three Ways to Train</h2>
+        <p>Choose the format that fits the athlete's goals, schedule, and experience level.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card card--highlight">
+          <div class="card__icon">🥍</div>
+          <h4>Lacrosse Training</h4>
+          <p>Private and small group training focused on stick skills, shooting, dodging, footwork, ground balls, position-specific development, and game IQ.</p>
+          <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPage('training')">View Services →</a></div>
+        </div>
+        <div class="card card--highlight">
+          <div class="card__icon">⚡</div>
+          <h4>Performance Training</h4>
+          <p>Speed, agility, strength habits, footwork, conditioning, and movement training built around the demands of lacrosse.</p>
+          <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPage('training')">View Services →</a></div>
+        </div>
+        <div class="card card--highlight">
+          <div class="card__icon">💻</div>
+          <h4>Online Coaching</h4>
+          <p>Year-round structure for athletes who want wall ball plans, speed or strength plans, video review, check-ins, and accountability outside of in-person training.</p>
+          <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPage('online')">View Online Coaching →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHO IT'S FOR ───────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="trust">
+        <img src="images/small-group-training.png" alt="Youth lacrosse players in small group training" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block" />
+        <div>
           <span class="label">Who It's For</span>
-          <h2>Built for Players Ages 8–18</h2>
-          <p style="color:var(--silver-mid);font-size:16px;line-height:1.75;margin-top:16px">7s Lacrosse is for elementary, middle school, and high school athletes who want more focused coaching than they get in large group practices. Training is available for beginners learning the game, experienced players sharpening their skills, and serious athletes looking for extra work outside of team practice.</p>
-          <p style="color:var(--silver-mid);font-size:16px;line-height:1.75;margin-top:12px">Sessions are adjusted based on each athlete's age, experience level, position, confidence, and goals. The main focus is offensive skill development, stick work, footwork, athleticism, lacrosse IQ, and game-ready habits.</p>
-          <p style="color:var(--silver-mid);font-size:16px;line-height:1.75;margin-top:12px">All positions are welcome. Attackmen and midfielders will receive the most position-specific offensive training. Defensemen, LSMs, goalies, and faceoff athletes can still benefit from general skill work, footwork, athletic development, passing, catching, shooting reps, and lacrosse IQ training, but full specialized position coaching for those roles is not currently offered.</p>
-          <p style="color:var(--silver-mid);font-size:16px;line-height:1.75;margin-top:12px">7s Lacrosse trains both boys and girls. A female coach may also be available for athletes or families who prefer that option.</p>
+          <h2>Who Is This Training For?</h2>
+          <p style="color:var(--silver-mid);font-size:16px;line-height:1.75;margin-top:16px">7s Lacrosse is built for elementary, middle school, and high school athletes. Training is available for beginners learning the game, experienced players sharpening their skills, club players looking for extra work, and serious athletes preparing for the next level.</p>
+          <p style="color:var(--silver-mid);font-size:16px;line-height:1.75;margin-top:12px">Sessions are adjusted based on each athlete's age, position, experience level, confidence, and goals. 7s Lacrosse trains both boys and girls.</p>
           <div class="mt-8">
             <div class="position-badges">
               <span class="pos-badge">Attack</span>
               <span class="pos-badge">Midfield</span>
-              <span class="pos-badge">Offensive Skill Development</span>
-              <span class="pos-badge">General Stick Work</span>
-              <span class="pos-badge">Footwork &amp; Athletic Development</span>
-              <span class="pos-badge">Lacrosse IQ</span>
             </div>
           </div>
-          <div class="mt-8">
-            <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Training</a>
+          <div class="mt-8" style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="#" onclick="showPage('training')">View Training Options</a>
           </div>
         </div>
-        <img src="images/small-group-training.png" alt="Youth lacrosse players in small group training" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block" />
       </div>
     </div>
   </section>
 
-  <!-- TRUST / ABOUT -->
+  <!-- ── ABOUT THE FOUNDER ──────────────────────────────────── -->
   <section class="section section--dark">
     <div class="container">
       <div class="trust">
         <div class="trust__img-wrap">
-          <img src="images/meet-coach-alex.jpg" alt="Coach Alex DeLierre coaching a youth lacrosse player" style="object-position:center 22%" />
+          <img src="images/meet-coach-alex.jpg" alt="Coach Alex DeLierre" style="object-position:center 22%" />
           <div class="trust__badge">
             <div class="trust__badge-title">USA Lacrosse All-America HM</div>
-            <div class="trust__badge-sub">Bronze Certified Coach · CSC Academic All-District Honoree</div>
+            <div class="trust__badge-sub">Bronze Certified Coach · CSC Academic All-District</div>
           </div>
         </div>
         <div class="trust__content">
-          <span class="label">Why Parents Trust 7s Lacrosse</span>
-          <h2>Structured Coaching.<br />Clear Instruction.<br />Real Player Development.</h2>
-          <p>Parents trust 7s Lacrosse because every session is built with a purpose. Athletes are learning specific skills, understanding why those skills matter, and building habits that transfer into real games.</p>
-          <p>Each session is adjusted to the athlete's age, position, experience level, confidence, and goals. Whether a player is brand new to lacrosse or looking to sharpen advanced skills, the focus stays the same: clear coaching, quality reps, and steady improvement.</p>
-          <p>Led by Coach Alex DeLierre, a Division III men's lacrosse player and Exercise Science major at Stockton University, 7s Lacrosse combines real playing experience with structured athletic development. The goal is simple: help players improve their skills, grow their confidence, and develop a stronger understanding of the game.</p>
-          <div class="trust__achievements">
+          <span class="label">About the <a href="#" onclick="showPage('about')" style="color:var(--blue-light);text-decoration:underline;text-decoration-color:rgba(90,155,232,0.4)">Founder</a></span>
+          <h2>Coach Alex DeLierre</h2>
+          <p>Coach Alex DeLierre is a Division III men's lacrosse player at Stockton University, a senior Exercise Science major, and a USA Lacrosse Bronze Certified Coach. He has over 15 years of playing experience and 7+ years of youth coaching clinic experience.</p>
+          <p style="margin-top:14px">In 2026, Alex was named USA Lacrosse Magazine All-America Honorable Mention and finished the season with 57 goals, 62 points, 47 ground balls, and 13 caused turnovers.</p>
+          <div class="trust__achievements" style="margin-top:24px">
             <div class="achievement"><div class="achievement__num">57<span>G</span></div><div class="achievement__label">2026 Goals</div></div>
             <div class="achievement"><div class="achievement__num">62<span>PTS</span></div><div class="achievement__label">2026 Points</div></div>
             <div class="achievement"><div class="achievement__num">7+<span>YRS</span></div><div class="achievement__label">Youth Clinic Coaching</div></div>
-            <div class="achievement"><div class="achievement__num">15<span>YRS</span></div><div class="achievement__label">Competitive Playing Experience</div></div>
+            <div class="achievement"><div class="achievement__num">15+<span>YRS</span></div><div class="achievement__label">Playing Experience</div></div>
           </div>
-          <a class="btn btn-outline" href="#" onclick="showPage('about')">Meet Coach Alex</a>
+          <a class="btn btn-outline" href="#" onclick="showPage('about')" style="margin-top:28px">Meet Coach Alex</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRICING PREVIEW -->
+  <!-- ── TESTIMONIALS PREVIEW ───────────────────────────────── -->
   <section class="section">
     <div class="container">
       <div class="section-header section-header--center">
-        <span class="label">Pricing</span>
-        <h2>Training Packages</h2>
-        <p>Packages are designed to create consistency, structure, and progress. Paid upfront before the first session.</p>
+        <span class="label">Testimonials</span>
+        <h2>Clients In Their Own Words</h2>
+        <p>Hear from athletes and families who have trained with 7s Lacrosse.</p>
       </div>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <h3>60-Minute Private Training</h3>
-          <p class="pricing-card__sub">Starts at $80 for a single session</p>
-          <div class="pricing-rows">
-            <div class="pricing-row"><span class="pricing-row__sessions">1 Athlete · 60 Minutes</span><div><div class="pricing-row__total">$80</div><div class="pricing-row__per">per session</div></div></div>
-          </div>
-        </div>
-        <div class="pricing-card pricing-card--featured">
-          <div class="pricing-card__badge">Most Complete</div>
-          <h3>90-Minute Private Training</h3>
-          <p class="pricing-card__sub">Starts at $120 for a single session</p>
-          <div class="pricing-rows">
-            <div class="pricing-row"><span class="pricing-row__sessions">1 Athlete · 90 Minutes</span><div><div class="pricing-row__total">$120</div><div class="pricing-row__per">per session</div></div></div>
-          </div>
-        </div>
-      </div>
-      <p class="muted" style="text-align:center;margin-top:24px">Small Group Training available for 2–8 athletes.</p>
-      <div style="text-align:center;margin-top:24px">
-        <a class="btn btn-outline" href="#" onclick="showPage('pricing')">View Full Pricing</a>
+      <div style="text-align:center;margin-top:8px">
+        <a class="btn btn-outline" href="#" onclick="showPage('testimonials')" style="border-color:var(--border);color:var(--silver-mid)">Read Testimonials</a>
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
+  <!-- ── FAQ PREVIEW ────────────────────────────────────────── -->
   <section class="section section--dark">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <span class="label">Questions</span>
+        <h2>Have <a href="#" onclick="showPage('faq')" style="color:inherit;text-decoration:underline;text-decoration-color:rgba(90,155,232,0.4)">Questions</a>?</h2>
+        <p>Learn more about training options, age groups, what athletes should bring, online coaching, payments, scheduling, and how sessions work.</p>
+      </div>
+      <div style="text-align:center;margin-top:8px">
+        <a class="btn btn-outline" href="#" onclick="showPage('faq')">View FAQ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINAL CTA ──────────────────────────────────────────── -->
+  <section class="section">
     <div class="container">
       <div class="cta-banner">
         <span class="label" style="display:block;margin-bottom:16px">Get Started</span>
-        <h2>Ready to Train With 7s Lacrosse?</h2>
-        <p>Submit a training request with the athlete's age, goals, experience level, and availability. Coach Alex will follow up with the best training option, scheduling details, waiver, and payment information.</p>
-        <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Training</a>
+        <h2>Ready to Start Training?</h2>
+        <p>Request training today and Coach Alex will help determine the best option based on the athlete's age, experience level, goals, and schedule.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px">
+          <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Training</a>
+          <a class="btn btn-outline" href="#" onclick="showPage('pricing')">View Pricing</a>
+          <a class="btn btn-outline" href="#" onclick="showPage('request')">Contact</a>
+        </div>
         <p class="muted mt-4">Or email <a href="mailto:training7slacrosse@gmail.com" style="color:var(--blue-light)">training7slacrosse@gmail.com</a></p>
       </div>
     </div>
@@ -1229,105 +1203,250 @@
 
 
 <!-- ============================================================
-     PAGE: TRAINING
+     PAGE: TESTIMONIALS
      ============================================================ -->
-<div class="page" id="page-training">
+<div class="page" id="page-testimonials">
   <section class="section">
     <div class="container">
-      <span class="label">What We Offer</span>
-      <h1 style="font-size:clamp(40px,6vw,72px);margin-bottom:16px">Training Options</h1>
-      <p style="font-size:18px;color:var(--silver-mid);max-width:640px;margin-bottom:64px">7s Lacrosse offers private training, small groups, strength and speed work, 7s Lacrosse Total Performance training, and online coaching for athletes ages 8–18.</p>
-
-      <!-- Private -->
-      <div class="trust mb-6" style="margin-bottom:64px">
-        <div>
-          <span class="label">One-on-One</span>
-          <h2>Private Lacrosse Training</h2>
-          <p style="color:var(--silver-mid);margin-top:16px;font-size:16px;line-height:1.75">Focused coaching for athletes who want individual attention and specific skill development. Every session is built around the athlete's age, position, experience, and goals.</p>
-          <h4 class="mt-8 mb-6" style="font-size:16px;color:var(--silver-mid);font-weight:600;font-family:var(--font-body)">Sessions can include:</h4>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:480px">
-            <div class="equip-item">Catching &amp; throwing</div>
-            <div class="equip-item">Shooting</div>
-            <div class="equip-item">Dodging</div>
-            <div class="equip-item">Footwork</div>
-            <div class="equip-item">Stick protection</div>
-            <div class="equip-item">Ground balls</div>
-            <div class="equip-item">Off-ball movement</div>
-            <div class="equip-item">Position-specific work</div>
-          </div>
-          <div class="mt-8"><a class="btn btn-primary" href="#" onclick="showPage('request')">Request Private Training</a></div>
-        </div>
-        <img src="images/one-on-one-training.png" alt="One-on-one youth lacrosse training with 7s Lacrosse" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block" />
+      <div class="section-header section-header--center">
+        <span class="label">Testimonials</span>
+        <h1 style="font-size:clamp(40px,6vw,72px);margin-bottom:16px">Clients In Their Own Words</h1>
+        <p style="font-size:18px;color:var(--silver-mid);max-width:600px;margin:0 auto">Hear from athletes and families who have trained with 7s Lacrosse. Testimonials will be posted here as they are collected.</p>
       </div>
-
-      <hr class="divider" />
-
-      <!-- Small Group -->
-      <div class="trust mb-6" style="margin-bottom:64px">
-        <img src="images/small-group-training.png" alt="Youth lacrosse players training in a small group with a goalie" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block" />
-        <div>
-          <span class="label">Groups</span>
-          <h2>Small Group Training</h2>
-          <p style="color:var(--silver-mid);margin-top:16px;font-size:16px;line-height:1.75">Training for siblings, friends, teammates, or parent-organized groups. Small groups give athletes competitive reps, game-like situations, and coaching in a more energetic environment.</p>
-          <p style="color:var(--silver-mid);margin-top:12px;font-size:16px;line-height:1.75">Best for friends, teammates, siblings, and athletes who enjoy competition. Group pricing is available — see the Pricing page.</p>
-          <div class="mt-8">
-            <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Group Training</a>
-            <a class="btn btn-outline" href="#" onclick="showPage('pricing')" style="margin-left:12px">View Group Pricing</a>
+      <div class="cards-grid cards-grid--2" style="margin-top:48px">
+        <div class="card" style="text-align:center;padding:48px 28px">
+          <div style="font-size:40px;margin-bottom:16px">🥍</div>
+          <h4>Athlete &amp; Parent Reviews</h4>
+          <p>Testimonials from families who have trained with 7s Lacrosse will appear here.</p>
+        </div>
+        <div class="card" style="text-align:center;padding:48px 28px">
+          <div style="font-size:40px;margin-bottom:16px">📋</div>
+          <h4>Have You Trained With Us?</h4>
+          <p>We appreciate honest feedback. Reach out to share your experience with 7s Lacrosse.</p>
+          <div style="margin-top:20px">
+            <a class="btn btn-outline" href="mailto:training7slacrosse@gmail.com">Send Feedback</a>
           </div>
         </div>
       </div>
-
-      <hr class="divider" />
-
-      <!-- Strength Speed -->
-      <div class="section-header" style="margin-bottom:32px">
-        <span class="label">Athletic Development</span>
-        <h2>Strength, Speed &amp; Agility</h2>
-        <p>Athletic development focused on movement quality, coordination, body control, acceleration, deceleration, change of direction, balance, mobility, and safe strength habits. Training is age-appropriate and adjusted to each athlete's ability and goals.</p>
-      </div>
-      <div class="cards-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:64px">
-        <div class="card"><div class="card__icon">🏃</div><h4>Speed &amp; Acceleration</h4><p>Field-based speed drills, sprint mechanics, and acceleration work that directly applies to lacrosse.</p></div>
-        <div class="card"><div class="card__icon">🔄</div><h4>Agility &amp; Change of Direction</h4><p>Ladder work, cone drills, and reactive movement training to make athletes quicker and harder to guard.</p></div>
-        <div class="card"><div class="card__icon">💪</div><h4>Strength &amp; Mobility</h4><p>Bodyweight training, weight training when appropriate, core strength, and mobility to build a durable athlete.</p></div>
-      </div>
-
-      <hr class="divider" />
-
-      <!-- 7s Lacrosse Total Performance -->
-      <div class="section-header" style="margin-bottom:32px">
-        <span class="label">Most Complete Option</span>
-        <h2>7s Lacrosse Total Performance</h2>
-        <p>The most complete training option. 7s Lacrosse Total Performance blends lacrosse skill work with strength, speed, agility, footwork, movement quality, and conditioning habits into one complete session.</p>
-      </div>
-      <div class="cards-grid--2 cards-grid" style="margin-bottom:64px">
-        <div class="card card--highlight"><div class="card__icon">🥍</div><h4>Lacrosse Skills</h4><p>Catching, throwing, shooting, dodging, stick work, and position-specific development.</p></div>
-        <div class="card card--highlight"><div class="card__icon">⚡</div><h4>Athletic Development</h4><p>Speed, strength, agility, movement, and conditioning combined with skill work for maximum gains.</p></div>
-      </div>
-
-      <hr class="divider" />
-
-      <!-- Position Specific -->
-      <div class="section-header" style="margin-bottom:32px">
-        <span class="label">Position-Aware</span>
-        <h2>Training Adjusted to Your Position</h2>
-        <p>7s Lacrosse works with every position on the field. Sessions are adjusted based on an athlete's role — drills, habits, and focus areas are shaped around how they actually play. Full position-specific goalie, faceoff, defense, and LSM coaching is not currently offered, but athletes in those positions will benefit from general skill work, footwork, athleticism, and lacrosse IQ development.</p>
-      </div>
-      <div class="position-badges" style="margin-bottom:48px">
-        <span class="pos-badge">Attackmen</span>
-        <span class="pos-badge">Midfielders</span>
-        <span class="pos-badge">Defensemen</span>
-        <span class="pos-badge">LSMs</span>
-        <span class="pos-badge">Goalies</span>
-        <span class="pos-badge">Faceoff Athletes</span>
-      </div>
-
-      <div class="cta-banner">
-        <h2>Ready to Get Started?</h2>
-        <p>Submit a training request and Coach Alex will recommend the best training option for the athlete's goals and schedule.</p>
+      <div style="text-align:center;margin-top:48px">
         <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Training</a>
       </div>
     </div>
   </section>
+</div><!-- end page-testimonials -->
+
+<!-- ============================================================
+     PAGE: TRAINING (COACHING SERVICES)
+     ============================================================ -->
+<div class="page" id="page-training">
+
+  <!-- PAGE HEADER -->
+  <section class="section">
+    <div class="container">
+      <span class="label">Coaching Services</span>
+      <h1 style="font-size:clamp(36px,6vw,72px);margin-bottom:20px">Structured Lacrosse Training<br />Built Around the Athlete</h1>
+      <p style="font-size:18px;color:var(--silver-mid);max-width:680px;line-height:1.75;margin-bottom:16px">7s Lacrosse offers private, small group, lacrosse performance, and online coaching for youth and high school players who want to improve their skills, athleticism, confidence, and understanding of the game.</p>
+      <p style="font-size:17px;color:var(--silver-mid);max-width:680px;line-height:1.75;margin-bottom:48px">Every session is built with a purpose. Athletes are not just running through random drills. They are working on specific skills, learning why those skills matter, and building habits that carry into games.</p>
+
+      <!-- Service overview cards -->
+      <div class="cards-grid">
+        <div class="card card--highlight">
+          <div class="card__icon">🥍</div>
+          <h4>Lacrosse Training</h4>
+          <p>Private and small group sessions focused on stick skills, shooting, dodging, ground balls, footwork, and game IQ.</p>
+        </div>
+        <div class="card card--highlight">
+          <div class="card__icon">⚡</div>
+          <h4>Performance Training</h4>
+          <p>Speed, agility, strength habits, footwork, conditioning, and movement training built around the demands of lacrosse.</p>
+        </div>
+        <div class="card card--highlight">
+          <div class="card__icon">💻</div>
+          <h4>Online Coaching</h4>
+          <p>Year-round structure, wall ball plans, skill and conditioning plans, video feedback, and check-ins.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVATE LACROSSE TRAINING -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="trust">
+        <div>
+          <span class="label">One-on-One</span>
+          <h2>Private Lacrosse Training</h2>
+          <p style="color:var(--silver-mid);margin-top:16px;font-size:16px;line-height:1.75">One-on-one training for athletes who want focused coaching and individual attention.</p>
+          <p style="color:var(--silver-mid);margin-top:12px;font-size:16px;line-height:1.75">Private sessions are built around the athlete's age, position, experience level, confidence, and goals. Training may include catching, throwing, cradling, shooting, dodging, footwork, stick protection, ground balls, off-ball movement, and position-specific skill work.</p>
+          <p style="color:var(--silver-mid);margin-top:12px;font-size:16px;line-height:1.75">Private training is best for players who need detailed instruction, extra reps, confidence, or a clear development plan.</p>
+          <h4 style="font-size:15px;color:var(--silver);font-weight:600;font-family:var(--font-body);margin-top:24px;margin-bottom:12px">Private training can focus on:</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:480px">
+            <div class="equip-item">Stick skills</div>
+            <div class="equip-item">Shooting and finishing</div>
+            <div class="equip-item">Dodging and footwork</div>
+            <div class="equip-item">Passing and catching</div>
+            <div class="equip-item">Ground balls</div>
+            <div class="equip-item">Off-ball movement</div>
+            <div class="equip-item">Position-specific skills</div>
+            <div class="equip-item">Lacrosse IQ</div>
+            <div class="equip-item">Confidence &amp; game prep</div>
+          </div>
+          <div class="mt-8">
+            <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Private Training</a>
+          </div>
+        </div>
+        <img src="images/one-on-one-training.png" alt="One-on-one youth lacrosse training with 7s Lacrosse" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SMALL GROUP TRAINING -->
+  <section class="section">
+    <div class="container">
+      <div class="trust">
+        <img src="images/small-group-training.png" alt="Youth lacrosse players training in a small group" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block" />
+        <div>
+          <span class="label">Groups</span>
+          <h2>Small Group Training</h2>
+          <p style="color:var(--silver-mid);margin-top:16px;font-size:16px;line-height:1.75">Small group training is built for siblings, friends, teammates, or parent-organized groups.</p>
+          <p style="color:var(--silver-mid);margin-top:12px;font-size:16px;line-height:1.75">These sessions give athletes more energy, competition, and game-like reps while still receiving direct coaching. Groups can be built by age, skill level, position, or team.</p>
+          <p style="color:var(--silver-mid);margin-top:12px;font-size:16px;line-height:1.75">Small group training is best for athletes who want to train with others, compete, and improve in a more game-like environment.</p>
+          <h4 style="font-size:15px;color:var(--silver);font-weight:600;font-family:var(--font-body);margin-top:24px;margin-bottom:12px">Small group sessions may include:</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:480px">
+            <div class="equip-item">Partner passing</div>
+            <div class="equip-item">Shooting drills</div>
+            <div class="equip-item">Dodging competitions</div>
+            <div class="equip-item">Ground ball battles</div>
+            <div class="equip-item">1v1 situations</div>
+            <div class="equip-item">Footwork &amp; agility</div>
+            <div class="equip-item">Team skill development</div>
+            <div class="equip-item">Small-sided games</div>
+          </div>
+          <div class="mt-8" style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Small Group Training</a>
+            <a class="btn btn-outline" href="#" onclick="showPage('pricing')">View Group Pricing</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HYBRID PERFORMANCE TRAINING -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Most Complete Option</span>
+        <h2>Lacrosse Performance Training</h2>
+        <p>Focused on combining skill work with speed, agility, strength, conditioning, footwork, and basic nutrition education to support training.</p>
+      </div>
+      <div class="trust" style="margin-top:0">
+        <div>
+          <p style="color:var(--silver-mid);font-size:16px;line-height:1.75">This option is designed for athletes who need more than stick skills. Sessions can include movement prep, change of direction, balance, acceleration, deceleration, shooting mechanics, dodging footwork, lacrosse-specific athletic development, and simple fueling education.</p>
+          <p style="color:var(--silver-mid);font-size:16px;line-height:1.75;margin-top:12px">Basic nutrition support is included only as general athlete education — not medical advice or a strict diet plan. The goal is to help athletes understand simple habits such as hydration, pre-training fueling basics, post-training recovery, and consistent eating around practices and games.</p>
+          <p style="color:var(--silver-mid);font-size:16px;line-height:1.75;margin-top:12px">Lacrosse Performance Training is best for players who want to become stronger, faster, and more confident on the field.</p>
+          <h4 style="font-size:15px;color:var(--silver);font-weight:600;font-family:var(--font-body);margin-top:24px;margin-bottom:12px">Lacrosse Performance Training may include:</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:560px">
+            <div class="equip-item">Dynamic warm-ups</div>
+            <div class="equip-item">Speed &amp; agility work</div>
+            <div class="equip-item">Change-of-direction training</div>
+            <div class="equip-item">Balance &amp; body control</div>
+            <div class="equip-item">Lacrosse-specific conditioning</div>
+            <div class="equip-item">Dodging footwork</div>
+            <div class="equip-item">Shooting mechanics</div>
+            <div class="equip-item">Strength &amp; movement habits</div>
+            <div class="equip-item">Skill work under fatigue</div>
+            <div class="equip-item">Hydration habits</div>
+            <div class="equip-item">Pre-training fueling basics</div>
+            <div class="equip-item">Post-training recovery habits</div>
+            <div class="equip-item">General healthy athlete routines</div>
+          </div>
+          <div class="mt-8">
+            <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Lacrosse Performance Training</a>
+          </div>
+        </div>
+        <div>
+          <div class="cards-grid--2 cards-grid" style="gap:16px">
+            <div class="card"><div class="card__icon">🏃</div><h4>Speed &amp; Agility</h4><p>Sprint mechanics, change of direction, and field-based movement that applies to lacrosse.</p></div>
+            <div class="card"><div class="card__icon">💪</div><h4>Strength Habits</h4><p>Age-appropriate bodyweight and strength training to build durability and power.</p></div>
+            <div class="card"><div class="card__icon">🥍</div><h4>Lacrosse Skills</h4><p>Shooting, dodging, and footwork under game-like pressure and fatigue.</p></div>
+            <div class="card"><div class="card__icon">🥗</div><h4>Fueling Education</h4><p>Basic healthy athlete habits — hydration, pre-training fuel, and recovery routines. General education only, not medical advice.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ONLINE COACHING -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Year-Round</span>
+        <h2>Online Coaching</h2>
+        <p>Online coaching gives athletes structured lacrosse development when they cannot do in-person training.</p>
+      </div>
+      <div class="cards-grid--2 cards-grid" style="margin-bottom:40px">
+        <div class="card">
+          <div class="card__icon">📋</div>
+          <h4>Structured Plans</h4>
+          <p>Wall ball programs, skill work plans, speed and strength routines, and conditioning plans built around the athlete's schedule.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🎥</div>
+          <h4>Video Feedback</h4>
+          <p>Athletes submit clips of their shooting, passing, footwork, or game play and receive specific feedback and corrections.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">📅</div>
+          <h4>Check-Ins &amp; Accountability</h4>
+          <p>Regular check-ins to track progress, answer questions, and adjust the plan as the athlete improves.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🌐</div>
+          <h4>Available Year-Round</h4>
+          <p>Online coaching is best for players who want a plan to follow, feedback on their game, and consistent development outside of live sessions.</p>
+        </div>
+      </div>
+      <a class="btn btn-outline" href="#" onclick="showPage('online')">Learn More About Online Coaching</a>
+    </div>
+  </section>
+
+  <!-- WHAT EVERY SESSION FOCUSES ON -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <span class="label">Every Session</span>
+        <h2>What Every Session Focuses On</h2>
+        <p>Every 7s Lacrosse session is designed to help athletes develop in a methodical way and reach progression milestones as their skills improve.</p>
+      </div>
+      <div class="cards-grid" style="margin-bottom:40px">
+        <div class="card"><div class="card__icon">🥍</div><h4>Stick Skills</h4><p>Catching, throwing, cradling, stick protection, and shooting from multiple angles.</p></div>
+        <div class="card"><div class="card__icon">🏃</div><h4>Speed &amp; Agility</h4><p>Footwork, acceleration, deceleration, and change-of-direction habits.</p></div>
+        <div class="card"><div class="card__icon">💪</div><h4>Strength &amp; Movement</h4><p>Age-appropriate strength habits and movement quality that transfer to the field.</p></div>
+        <div class="card"><div class="card__icon">🧠</div><h4>Lacrosse IQ</h4><p>Off-ball movement, positioning, decision-making, and game habits.</p></div>
+        <div class="card"><div class="card__icon">🎯</div><h4>Confidence &amp; Preparation</h4><p>Mental readiness, game preparation, and building consistency through structured reps.</p></div>
+        <div class="card"><div class="card__icon">📝</div><h4>Homework Between Sessions</h4><p>Wall ball plans, skill assignments, and progress tracking to keep athletes improving outside of sessions.</p></div>
+      </div>
+      <p style="font-size:17px;color:var(--silver-mid);text-align:center;max-width:620px;margin:0 auto">The goal is simple: help each athlete become more skilled, confident, and prepared to perform in games.</p>
+    </div>
+  </section>
+
+  <!-- NOT SURE WHERE TO START -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <span class="label" style="display:block;margin-bottom:16px">Get Started</span>
+        <h2>Not Sure Where to Start?</h2>
+        <p>Most athletes begin with private training or a small group session. From there, Coach Alex can evaluate the player's current skill level, goals, strengths, and areas for improvement.</p>
+        <p style="color:var(--muted);font-size:15px;margin-top:8px">Training is adjusted based on the athlete's age, position, experience, and long-term goals.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:24px">
+          <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Training</a>
+          <a class="btn btn-outline" href="#" onclick="showPage('pricing')">View Pricing</a>
+          <a class="btn btn-outline" href="#" onclick="showPage('online')">Learn About Online Coaching</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </div>
 
 
@@ -1356,9 +1475,6 @@
             <div class="pricing-row"><span class="pricing-row__sessions">8 Sessions</span><div><div class="pricing-row__total">$563</div></div></div>
             <div class="pricing-row"><span class="pricing-row__sessions">10 Sessions</span><div><div class="pricing-row__total">$672</div></div></div>
             <div class="pricing-row"><span class="pricing-row__sessions">12 Sessions</span><div><div class="pricing-row__total">$768</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">16 Sessions</span><div><div class="pricing-row__total">$998</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">20 Sessions</span><div><div class="pricing-row__total">$1,200</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">24 Sessions</span><div><div class="pricing-row__total">$1,382</div></div></div>
           </div>
         </div>
         <div class="pricing-card pricing-card--featured">
@@ -1371,9 +1487,6 @@
             <div class="pricing-row"><span class="pricing-row__sessions">8 Sessions</span><div><div class="pricing-row__total">$845</div></div></div>
             <div class="pricing-row"><span class="pricing-row__sessions">10 Sessions</span><div><div class="pricing-row__total">$1,008</div></div></div>
             <div class="pricing-row"><span class="pricing-row__sessions">12 Sessions</span><div><div class="pricing-row__total">$1,152</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">16 Sessions</span><div><div class="pricing-row__total">$1,498</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">20 Sessions</span><div><div class="pricing-row__total">$1,800</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">24 Sessions</span><div><div class="pricing-row__total">$2,074</div></div></div>
           </div>
         </div>
       </div>
@@ -1446,6 +1559,64 @@
         </div>
       </div>
 
+      <!-- ONLINE COACHING PRICING -->
+      <div id="online-coaching-pricing" style="padding-top:16px">
+        <div class="section-header">
+          <span class="label">Online Coaching</span>
+          <h2>Online Coaching Pricing</h2>
+          <p>Available year-round for athletes who want structure, feedback, and accountability when in-person training is not available.</p>
+        </div>
+        <div class="cards-grid">
+          <div class="pricing-card" style="background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px">
+            <div style="font-size:32px;margin-bottom:12px">📋</div>
+            <h3 style="font-family:var(--font-display);font-size:22px;color:var(--white);margin-bottom:6px">Online Training Plan</h3>
+            <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:4px">$125<span style="font-size:16px;color:var(--muted);font-weight:400">/month</span></div>
+            <p style="font-size:13px;color:var(--blue-light);font-weight:600;margin-bottom:16px">Best for athletes who need a clear plan to follow on their own.</p>
+            <ul style="list-style:none;padding:0;margin-bottom:20px">
+              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Wall ball plan</li>
+              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Skill work assignments</li>
+              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Speed, strength, or conditioning plan</li>
+              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Structured around age, position &amp; goals</li>
+              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0">✓ &nbsp;General progress adjustments</li>
+            </ul>
+            <p style="font-size:14px;color:var(--muted)">A structured monthly plan so athletes know exactly what to work on outside of team practices or in-person training.</p>
+          </div>
+          <div class="pricing-card pricing-card--featured" style="border-radius:var(--radius-lg);padding:32px 28px;position:relative">
+            <div class="pricing-card__badge">Most Support</div>
+            <div style="font-size:32px;margin-bottom:12px">🎯</div>
+            <h3 style="font-family:var(--font-display);font-size:22px;color:var(--white);margin-bottom:6px">Online Coaching Plus</h3>
+            <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:4px">$150<span style="font-size:16px;color:var(--muted);font-weight:400">/month</span></div>
+            <p style="font-size:13px;color:var(--blue-light);font-weight:600;margin-bottom:16px">Best for athletes who want feedback, accountability, and support.</p>
+            <ul style="list-style:none;padding:0;margin-bottom:20px">
+              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.08)">✓ &nbsp;Everything in Online Training Plan</li>
+              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.08)">✓ &nbsp;Additional check-ins</li>
+              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.08)">✓ &nbsp;Video feedback once a week</li>
+              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0">✓ &nbsp;Plan adjustments based on progress</li>
+            </ul>
+            <p style="font-size:14px;color:var(--muted)">Best for athletes who want a plan, feedback, and consistent support instead of just written workouts.</p>
+          </div>
+          <div class="pricing-card" style="background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px">
+            <div style="font-size:32px;margin-bottom:12px">🎥</div>
+            <h3 style="font-family:var(--font-display);font-size:22px;color:var(--white);margin-bottom:6px">Video Review Add-On</h3>
+            <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:4px">$20<span style="font-size:16px;color:var(--muted);font-weight:400">/video</span></div>
+            <p style="font-size:13px;color:var(--blue-light);font-weight:600;margin-bottom:16px">Best for players who only want one clip reviewed.</p>
+            <ul style="list-style:none;padding:0;margin-bottom:20px">
+              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Review of one training or game clip</li>
+              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Specific coaching points</li>
+              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Corrections to focus on</li>
+              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0">✓ &nbsp;Next-step recommendations</li>
+            </ul>
+            <p style="font-size:14px;color:var(--muted)">Best for athletes who want quick feedback on a specific skill, rep, or game situation.</p>
+          </div>
+        </div>
+        <p class="muted" style="margin-top:24px;text-align:center;max-width:600px;margin-left:auto;margin-right:auto">Not sure which option is best? Submit a training request and Coach Alex can recommend the right online coaching option based on the athlete's age, position, experience, goals, and schedule.</p>
+        <div style="text-align:center;margin-top:24px">
+          <a class="btn btn-primary" href="#" onclick="showPage('request')">Start Online Coaching</a>
+        </div>
+      </div>
+
+      <hr class="divider" style="margin-top:64px" />
+
       <div class="cta-banner">
         <h2>Ready to Book a Package?</h2>
         <p>Submit a training request to get started. Coach Alex will confirm the schedule, send waiver and payment information, and training can begin.</p>
@@ -1499,11 +1670,61 @@
         <div class="step"><div class="step__num">05</div><div><h4>Adjust as Progress Is Made</h4><p>Plans evolve with the athlete as goals shift, the season approaches, or new areas need work.</p></div></div>
       </div>
 
-      <div class="cta-banner">
-        <h2>Start Online Coaching</h2>
-        <p>Online coaching is available year-round. Submit a request to get started with a plan built around the athlete's goals.</p>
-        <a class="btn btn-primary" href="#" onclick="showPage('request')">Start Online Coaching</a>
+      <!-- ONLINE COACHING OPTIONS & PRICING -->
+      <div class="section-header" style="margin-top:16px">
+        <span class="label">Options &amp; Pricing</span>
+        <h2>Online Coaching Options &amp; Pricing</h2>
+        <p>Online coaching is built for athletes who want structure, feedback, and accountability when in-person training is not available. Parents can choose the option that best fits the athlete's needs, schedule, and level of support.</p>
       </div>
+      <div class="cards-grid" style="margin-bottom:32px">
+        <div class="pricing-card" style="background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px">
+          <div style="font-size:32px;margin-bottom:12px">📋</div>
+          <h3 style="font-family:var(--font-display);font-size:22px;color:var(--white);margin-bottom:6px">Online Training Plan</h3>
+          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:4px">$125<span style="font-size:16px;color:var(--muted);font-weight:400">/month</span></div>
+          <p style="font-size:13px;color:var(--blue-light);font-weight:600;margin-bottom:16px">Best for athletes who need a clear plan to follow on their own.</p>
+          <ul style="list-style:none;padding:0;margin-bottom:20px">
+            <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Wall ball plan</li>
+            <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Skill work assignments</li>
+            <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Speed, strength, or conditioning plan</li>
+            <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Structured around age, position &amp; goals</li>
+            <li style="font-size:14px;color:var(--silver-mid);padding:5px 0">✓ &nbsp;General progress adjustments</li>
+          </ul>
+          <p style="font-size:14px;color:var(--muted)">A structured monthly plan so athletes know exactly what to work on outside of team practices or in-person training.</p>
+        </div>
+        <div class="pricing-card pricing-card--featured" style="border-radius:var(--radius-lg);padding:32px 28px;position:relative">
+          <div class="pricing-card__badge">Most Support</div>
+          <div style="font-size:32px;margin-bottom:12px">🎯</div>
+          <h3 style="font-family:var(--font-display);font-size:22px;color:var(--white);margin-bottom:6px">Online Coaching Plus</h3>
+          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:4px">$150<span style="font-size:16px;color:var(--muted);font-weight:400">/month</span></div>
+          <p style="font-size:13px;color:var(--blue-light);font-weight:600;margin-bottom:16px">Best for athletes who want feedback, accountability, and support.</p>
+          <ul style="list-style:none;padding:0;margin-bottom:20px">
+            <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.08)">✓ &nbsp;Everything in Online Training Plan</li>
+            <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.08)">✓ &nbsp;Additional check-ins</li>
+            <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.08)">✓ &nbsp;Video feedback once a week</li>
+            <li style="font-size:14px;color:var(--silver-mid);padding:5px 0">✓ &nbsp;Plan adjustments based on progress</li>
+          </ul>
+          <p style="font-size:14px;color:var(--muted)">Best for athletes who want a plan, feedback, and consistent support instead of just written workouts.</p>
+        </div>
+        <div class="pricing-card" style="background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px">
+          <div style="font-size:32px;margin-bottom:12px">🎥</div>
+          <h3 style="font-family:var(--font-display);font-size:22px;color:var(--white);margin-bottom:6px">Video Review Add-On</h3>
+          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:4px">$20<span style="font-size:16px;color:var(--muted);font-weight:400">/video</span></div>
+          <p style="font-size:13px;color:var(--blue-light);font-weight:600;margin-bottom:16px">Best for players who only want one clip reviewed.</p>
+          <ul style="list-style:none;padding:0;margin-bottom:20px">
+            <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Review of one training or game clip</li>
+            <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Specific coaching points</li>
+            <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Corrections to focus on</li>
+            <li style="font-size:14px;color:var(--silver-mid);padding:5px 0">✓ &nbsp;Next-step recommendations</li>
+          </ul>
+          <p style="font-size:14px;color:var(--muted)">Best for athletes who want quick feedback on a specific skill, rep, or game situation.</p>
+        </div>
+      </div>
+      <p class="muted" style="text-align:center;max-width:600px;margin:0 auto 24px">Not sure which option is best? Submit a training request and Coach Alex can recommend the right online coaching option based on the athlete's age, position, experience, goals, and schedule.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:64px">
+        <a class="btn btn-primary" href="#" onclick="showPage('request')">Start Online Coaching</a>
+        <a class="btn btn-outline" href="#" onclick="showPageSection('pricing','online-coaching-pricing')">View Full Pricing</a>
+      </div>
+
     </div>
   </section>
 </div>
@@ -1515,53 +1736,45 @@
 <div class="page" id="page-about">
   <section class="section">
     <div class="container">
-      <div class="trust" style="margin-bottom:80px">
-        <!-- Coach Alex photo -->
-        <div class="trust__img-wrap">
-          <img src="images/meet-coach-alex.jpg" alt="Coach Alex DeLierre coaching a youth lacrosse player" style="object-position:center 22%" />
+
+      <div class="trust" style="align-items:flex-start">
+        <!-- Photo -->
+        <div class="trust__img-wrap" style="flex-shrink:0">
+          <img src="images/meet-coach-alex.jpg" alt="Coach Alex DeLierre" style="object-position:center 22%" />
         </div>
+
+        <!-- Text content -->
         <div class="trust__content">
-          <span class="label">Coach</span>
-          <h1 style="font-size:clamp(36px,5vw,64px);margin-bottom:14px">Alex DeLierre</h1>
-          <p>Alex DeLierre is a senior Exercise Science major and Division III attackman at Stockton University. He has 15 years of competitive playing experience and brings a player-development approach to every 7s Lacrosse session.</p>
-          <p>In 2026, Alex earned USA Lacrosse Magazine All-America Honorable Mention, CLC First Team honors, and was named CLC Offensive Player of the Week twice. Playing attack, he finished the season with 57 goals, 62 points, 47 ground balls, and 13 caused turnovers — production that reflects scoring ability, riding effort, toughness, and all-around play.</p>
-          <p>A USA Lacrosse Bronze Certified Coach and CSC Academic All-District Honoree, Alex has volunteered at peewee clinics for seven years and provided private instruction for youth players for over a year. His goal with 7s Lacrosse is simple: give athletes clear, specific coaching instead of random drills. Every session is built so players know exactly what they are working on, why it matters, and how it applies to the game.</p>
-          <div class="trust__achievements">
-            <div class="achievement"><div class="achievement__num">57<span>G</span></div><div class="achievement__label">2026 Goals</div></div>
-            <div class="achievement"><div class="achievement__num">62<span>PTS</span></div><div class="achievement__label">2026 Points</div></div>
-            <div class="achievement"><div class="achievement__num">47<span>GB</span></div><div class="achievement__label">Ground Balls</div></div>
-            <div class="achievement"><div class="achievement__num">13<span>CT</span></div><div class="achievement__label">Caused Turnovers</div></div>
+          <h1 style="font-size:clamp(26px,4vw,52px);margin-bottom:28px">Coach Alex DeLierre a.k.a. Coach Deli</h1>
+
+          <p style="color:var(--silver-mid);font-size:16px;line-height:1.8">Alexandre DeLierre is a Student-Athlete at Stockton University in Galloway, NJ. He is a Senior studying Exercise Science. He has over 15 years of competitive lacrosse experience playing as an attackman, and seven years coaching youth players.</p>
+
+          <h4 style="font-family:var(--font-body);font-size:14px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue-light);margin-top:28px;margin-bottom:14px">Accolades</h4>
+          <ul style="list-style:none;padding:0;margin:0">
+            <li style="color:var(--silver-mid);font-size:15px;line-height:1.7;padding:5px 0;border-bottom:1px solid var(--border)">All-America Honorable Mention by USA Lacrosse Magazine</li>
+            <li style="color:var(--silver-mid);font-size:15px;line-height:1.7;padding:5px 0;border-bottom:1px solid var(--border)">Coastal Lacrosse Conference First Team</li>
+            <li style="color:var(--silver-mid);font-size:15px;line-height:1.7;padding:5px 0;border-bottom:1px solid var(--border)">Coastal Lacrosse Conference All-Academic Team for the past 3 seasons</li>
+            <li style="color:var(--silver-mid);font-size:15px;line-height:1.7;padding:5px 0;border-bottom:1px solid var(--border)">Coastal Lacrosse Conference Offensive Player of the Week 2x during the '25–'26 season</li>
+            <li style="color:var(--silver-mid);font-size:15px;line-height:1.7;padding:5px 0;border-bottom:1px solid var(--border)">CSC Academic All-District Honoree</li>
+            <li style="color:var(--silver-mid);font-size:15px;line-height:1.7;padding:5px 0;border-bottom:1px solid var(--border)">USA Lacrosse Bronze Certified Coach</li>
+            <li style="color:var(--silver-mid);font-size:15px;line-height:1.7;padding:5px 0;border-bottom:1px solid var(--border)">Volunteer Youth Coach for seven years</li>
+            <li style="color:var(--silver-mid);font-size:15px;line-height:1.7;padding:5px 0;border-bottom:1px solid var(--border)">NJ State Champion Gr. IV as a High School Junior</li>
+            <li style="color:var(--silver-mid);font-size:15px;line-height:1.7;padding:5px 0;border-bottom:1px solid var(--border)">Chi Alpha Sigma — Member of The National College Athlete Honor Society</li>
+            <li style="color:var(--silver-mid);font-size:15px;line-height:1.7;padding:5px 0">'26–'27 Stockton University's Men's Team Captain — Osprey Lacrosse</li>
+          </ul>
+
+          <p style="color:var(--silver-mid);font-size:16px;line-height:1.8;margin-top:24px">Alex has been a Student-Athlete Advisory Committee Representative for 3 years while at Stockton University. As a SAAC Rep, Alex has acted as a vital bridge between the lacrosse team, fellow athletes, and the university's athletic administration.</p>
+
+          <p style="color:var(--silver-mid);font-size:16px;line-height:1.8;margin-top:20px">Coach "Deli" lives and breathes lacrosse. His mission is straightforward: develop complete lacrosse athletes. Not only as highly skilled but athletes who are strong, and properly conditioned to play this very fast and physically demanding sport. Having played the sport for a long time and experienced many injuries, he believes his comprehensive training system will develop athletes who can play at a high level from their early years all the way through college and beyond.</p>
+
+          <p style="color:var(--silver-mid);font-size:16px;line-height:1.8;margin-top:20px">The Sevens Lacrosse Performance System was developed by Alex DeLierre to develop athletes in a structured and personalized manner — not just random drills and exercises. Every milestone level and training session is designed so players — and their parents — can understand how they are developing, understand how they are being held accountable, and how the training they are doing applies to the sport.</p>
+
+          <div style="margin-top:32px">
+            <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Training</a>
           </div>
         </div>
       </div>
 
-      <hr class="divider" />
-
-      <div class="section-header section-header--center" style="margin-bottom:40px">
-        <span class="label">The Name</span>
-        <h2>Why 7s?</h2>
-        <p>The name 7s Lacrosse comes from the number 77. Alex has worn #77 since high school, and the number has become part of his identity as an athlete. Over time, it started to represent more than a jersey number.</p>
-      </div>
-
-      <div class="section-header section-header--center" style="margin-bottom:40px">
-        <span class="label">The Belief</span>
-        <h2>The 7s Standard</h2>
-        <p>The 7s Standard is the belief that confidence comes from preparation. Athletes improve when they train with purpose, show up consistently, and learn how to do the work outside of practice.</p>
-      </div>
-
-      <div class="standard-grid" style="margin-bottom:64px">
-        <div class="standard-item"><div class="standard-item__icon">🧱</div><div class="standard-item__label">Fundamentals First</div></div>
-        <div class="standard-item"><div class="standard-item__icon">🎯</div><div class="standard-item__label">Train With Purpose</div></div>
-        <div class="standard-item"><div class="standard-item__icon">🏃</div><div class="standard-item__label">Complete Athlete</div></div>
-        <div class="standard-item"><div class="standard-item__icon">🔒</div><div class="standard-item__label">Confidence = Preparation</div></div>
-        <div class="standard-item"><div class="standard-item__icon">📈</div><div class="standard-item__label">Measurable Progress</div></div>
-      </div>
-
-      <div class="cta-banner">
-        <h2>Train With Coach Alex</h2>
-        <p>Parents can expect clear communication, age-appropriate training, a positive coaching environment, and a focus on fundamentals, safety, effort, and improvement.</p>
-        <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Training</a>
-      </div>
     </div>
   </section>
 </div>
@@ -1768,8 +1981,7 @@
               <option value="">Select training type</option>
               <option>Private lacrosse training</option>
               <option>Small group training</option>
-              <option>Strength / speed training</option>
-              <option>7s Lacrosse Total Performance</option>
+              <option>Lacrosse performance training</option>
               <option>Online coaching</option>
               <option>Not sure yet</option>
             </select>
@@ -1865,41 +2077,12 @@
      ============================================================ -->
 <footer class="footer">
   <div class="container">
-    <div class="footer__top">
-      <div class="footer__brand">
-        <a class="nav__logo" href="#" onclick="showPage('home')">
-      <img src="images/logo.jpeg" alt="7s Lacrosse" style="height:44px;width:auto;display:block" />
-    </a>
-        <p>Skill, speed, strength, and game IQ — in person and online.<br />NJ · Online coaching year-round.</p>
-        <p style="margin-top:8px"><a href="mailto:training7slacrosse@gmail.com" style="color:var(--blue-light)">training7slacrosse@gmail.com</a></p>
-        <p style="margin-top:4px"><a href="https://instagram.com/7slacrosse" target="_blank" rel="noopener" style="color:var(--muted)">@7slacrosse</a></p>
-      </div>
-      <div>
-        <div class="footer__col-title">Quick Links</div>
-        <div class="footer__links">
-          <a class="footer__link" href="#" onclick="showPage('training')">Training</a>
-          <a class="footer__link" href="#" onclick="showPage('pricing')">Pricing</a>
-          <a class="footer__link" href="#" onclick="showPage('online')">Online Coaching</a>
-          <a class="footer__link" href="#" onclick="showPage('about')">About</a>
-          <a class="footer__link" href="#" onclick="showPage('faq')">FAQ</a>
-          <a class="footer__link" href="#" onclick="showPage('request')">Request Training</a>
-        </div>
-      </div>
-      <div>
-        <div class="footer__col-title">Contact</div>
-        <div class="footer__links">
-          <a class="footer__link" href="mailto:training7slacrosse@gmail.com">training7slacrosse@gmail.com</a>
-          <a class="footer__link" href="https://instagram.com/7slacrosse" target="_blank" rel="noopener">@7slacrosse on Instagram</a>
-        </div>
-        <div style="margin-top:24px">
-          <a class="btn btn-primary" style="font-size:15px;padding:12px 22px" href="#" onclick="showPage('request')">Request Training</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <div class="footer__copy">© 2026 7s Lacrosse LLC. All rights reserved.</div>
-      <div class="footer__disclaimer">Training availability may vary by season, field access, permits, weather, and athlete schedule.</div>
-      <div class="footer__disclaimer">7s Lacrosse LLC is independently owned and operated. 7s Lacrosse is not owned, operated, or officially endorsed by USA Lacrosse.</div>
+    <div style="text-align:center;padding:48px 0 32px">
+      <p style="font-size:16px;color:var(--silver-mid);margin-bottom:28px">Skill, speed, strength, and game IQ — in person and online.</p>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em">Contact</p>
+      <p style="margin-bottom:8px"><a href="mailto:training7slacrosse@gmail.com" style="color:var(--blue-light);font-size:15px">training7slacrosse@gmail.com</a></p>
+      <p style="margin-bottom:32px"><a href="https://instagram.com/7slacrosse" target="_blank" rel="noopener" style="color:var(--muted);font-size:15px">@7slacrosse on Instagram</a></p>
+      <p style="font-size:13px;color:var(--muted)">© 2026 7s Lacrosse. All rights reserved.</p>
     </div>
   </div>
 </footer>
@@ -1910,6 +2093,14 @@
      ============================================================ -->
 <script>
   // ── Page navigation ──────────────────────────────────────────
+  function showPageSection(pageId, sectionId) {
+    showPage(pageId);
+    setTimeout(function() {
+      var el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
+  }
+
   function showPage(pageId) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     const page = document.getElementById('page-' + pageId);
