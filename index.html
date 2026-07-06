@@ -612,6 +612,20 @@
       color: var(--muted);
       text-align: right;
     }
+    .pricing-row__tag {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-left: 10px;
+      vertical-align: 2px;
+    }
 
     /* Group pricing table */
     .group-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
@@ -1290,6 +1304,7 @@
           </div>
           <div class="mt-8">
             <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Private Training</a>
+            <a class="btn btn-outline" href="#" onclick="showPageSection('pricing','private-training-pricing')">View Private Training Pricing</a>
           </div>
         </div>
         <img src="images/one-on-one-training.png" alt="One-on-one youth lacrosse training with 7s Lacrosse" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block" />
@@ -1359,6 +1374,7 @@
           </div>
           <div class="mt-8">
             <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Lacrosse Performance Training</a>
+            <a class="btn btn-outline" href="#" onclick="showPageSection('pricing','performance-training-pricing')">View Performance Training Pricing</a>
           </div>
         </div>
         <div>
@@ -1457,85 +1473,6 @@
       <h1 style="font-size:clamp(40px,6vw,72px);margin-bottom:16px">Pricing</h1>
       <p style="font-size:18px;color:var(--silver-mid);max-width:640px;margin-bottom:64px">Training packages are designed to create consistency, structure, and progress. Packages are paid upfront before the first scheduled session.</p>
 
-      <div class="section-header">
-        <span class="label">Individual Training</span>
-        <h2>Private Training Packages</h2>
-        <p>For 1 athlete. Choose a session length below.</p>
-      </div>
-      <div class="pricing-grid" style="margin-bottom:64px">
-        <div class="pricing-card">
-          <h3>60-Minute Training</h3>
-          <p class="pricing-card__sub">1 athlete · 60-minute sessions</p>
-          <div class="pricing-rows">
-            <div class="pricing-row"><span class="pricing-row__sessions">1 Session</span><div><div class="pricing-row__total">$80</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">6 Sessions</span><div><div class="pricing-row__total">$432</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">8 Sessions</span><div><div class="pricing-row__total">$563</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">10 Sessions</span><div><div class="pricing-row__total">$672</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">12 Sessions</span><div><div class="pricing-row__total">$768</div></div></div>
-          </div>
-        </div>
-        <div class="pricing-card pricing-card--featured">
-          <div class="pricing-card__badge">Most Complete</div>
-          <h3>90-Minute Training</h3>
-          <p class="pricing-card__sub">1 athlete · 90-minute sessions</p>
-          <div class="pricing-rows">
-            <div class="pricing-row"><span class="pricing-row__sessions">1 Session</span><div><div class="pricing-row__total">$120</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">6 Sessions</span><div><div class="pricing-row__total">$648</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">8 Sessions</span><div><div class="pricing-row__total">$845</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">10 Sessions</span><div><div class="pricing-row__total">$1,008</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">12 Sessions</span><div><div class="pricing-row__total">$1,152</div></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="section-header">
-        <span class="label">Groups</span>
-        <h2>Small Group Training</h2>
-        <p>Available for siblings, friends, teammates, or parent-organized groups. Price shown is per athlete and as a total session price.</p>
-      </div>
-      <div class="cards-grid--2 cards-grid" style="margin-bottom:64px;align-items:start">
-        <div class="card" style="padding:0;overflow:hidden">
-          <div style="padding:24px 24px 0"><h4>60-Minute Small Group</h4></div>
-          <table class="group-table">
-            <thead>
-              <tr>
-                <th>Group Size</th>
-                <th>Per Athlete</th>
-                <th>Total Session</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>2 Athletes</td><td>$50</td><td>$100</td></tr>
-              <tr><td>3 Athletes</td><td>$40</td><td>$120</td></tr>
-              <tr><td>4 Athletes</td><td>$35</td><td>$140</td></tr>
-              <tr><td>5 Athletes</td><td>$35</td><td>$175</td></tr>
-              <tr><td>6 Athletes</td><td>$35</td><td>$210</td></tr>
-              <tr><td>8 Athletes</td><td>$35</td><td>$280</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="card" style="padding:0;overflow:hidden">
-          <div style="padding:24px 24px 0"><h4>90-Minute Small Group</h4></div>
-          <table class="group-table">
-            <thead>
-              <tr>
-                <th>Group Size</th>
-                <th>Per Athlete</th>
-                <th>Total Session</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>2 Athletes</td><td>$75</td><td>$150</td></tr>
-              <tr><td>3 Athletes</td><td>$60</td><td>$180</td></tr>
-              <tr><td>4 Athletes</td><td>$50</td><td>$200</td></tr>
-              <tr><td>5 Athletes</td><td>$50</td><td>$250</td></tr>
-              <tr><td>6 Athletes</td><td>$50</td><td>$300</td></tr>
-              <tr><td>8 Athletes</td><td>$50</td><td>$400</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
       <div class="cards-grid--2 cards-grid" style="margin-bottom:64px">
         <div class="card">
           <div class="card__icon">💳</div>
@@ -1546,7 +1483,7 @@
             <div class="equip-item">Venmo</div>
             <div class="equip-item">ACH</div>
           </div>
-          <p class="muted mt-4">Training packages are paid upfront before the first session. Pay-per-session may be available with payment due immediately after each session.</p>
+          <p class="muted mt-4">Training packages are paid upfront before the first session.</p>
         </div>
         <div class="card">
           <div class="card__icon">🌧️</div>
@@ -1554,6 +1491,132 @@
           <p style="margin-top:8px;font-size:15px;color:var(--silver-mid)">Please provide at least 24 hours' notice if an athlete needs to miss a scheduled session. Sessions missed without proper notice may be forfeited.</p>
           <p style="margin-top:12px;font-size:15px;color:var(--silver-mid)">Weather or unsafe field conditions can be rescheduled.</p>
         </div>
+      </div>
+
+      <div class="section-header" id="private-training-pricing" style="padding-top:16px">
+        <span class="label">Individual Training</span>
+        <h2>Private Training Packages</h2>
+        <p>For 1 athlete. Choose a session length below.</p>
+      </div>
+      <div class="pricing-grid" style="margin-bottom:64px">
+        <div class="pricing-card">
+          <h3>60-Minute Training</h3>
+          <p class="pricing-card__sub">1 athlete · 60-minute sessions</p>
+          <div class="pricing-rows">
+            <div class="pricing-row"><span class="pricing-row__sessions">6 Sessions</span><div><div class="pricing-row__total">$390</div></div></div>
+            <div class="pricing-row"><span class="pricing-row__sessions">8 Sessions</span><div><div class="pricing-row__total">$512</div></div></div>
+            <div class="pricing-row"><span class="pricing-row__sessions">10 Sessions<span class="pricing-row__tag">Most Popular</span></span><div><div class="pricing-row__total">$600</div></div></div>
+            <div class="pricing-row"><span class="pricing-row__sessions">12 Sessions</span><div><div class="pricing-row__total">$696</div></div></div>
+          </div>
+        </div>
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__badge">Most Complete</div>
+          <h3>90-Minute Training</h3>
+          <p class="pricing-card__sub">1 athlete · 90-minute sessions</p>
+          <div class="pricing-rows">
+            <div class="pricing-row"><span class="pricing-row__sessions">6 Sessions</span><div><div class="pricing-row__total">$540</div></div></div>
+            <div class="pricing-row"><span class="pricing-row__sessions">8 Sessions</span><div><div class="pricing-row__total">$704</div></div></div>
+            <div class="pricing-row"><span class="pricing-row__sessions">10 Sessions<span class="pricing-row__tag">Most Popular</span></span><div><div class="pricing-row__total">$850</div></div></div>
+            <div class="pricing-row"><span class="pricing-row__sessions">12 Sessions</span><div><div class="pricing-row__total">$960</div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <span class="label">Groups</span>
+        <h2>Small Group Training</h2>
+        <p>Available for siblings, friends, teammates, or parent-organized groups. Prices shown are per athlete, per session.</p>
+      </div>
+      <div style="margin-bottom:32px;overflow-x:auto">
+        <div class="card" style="padding:0;overflow:hidden;margin-bottom:24px">
+          <div style="padding:24px 24px 0"><h4>60-Minute Small Group</h4></div>
+          <table class="group-table">
+            <thead>
+              <tr>
+                <th>Group Size</th>
+                <th>Per Athlete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>2 Athletes</td><td>$45</td></tr>
+              <tr><td>3 Athletes</td><td>$40</td></tr>
+              <tr><td>4 Athletes</td><td>$35</td></tr>
+              <tr><td>5 Athletes</td><td>$30</td></tr>
+              <tr><td>6 Athletes</td><td>$30</td></tr>
+              <tr><td>8 Athletes</td><td>$30</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card" style="padding:0;overflow:hidden">
+          <div style="padding:24px 24px 0"><h4>90-Minute Small Group</h4></div>
+          <table class="group-table">
+            <thead>
+              <tr>
+                <th>Group Size</th>
+                <th>Per Athlete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>2 Athletes</td><td>$55</td></tr>
+              <tr><td>3 Athletes</td><td>$50</td></tr>
+              <tr><td>4 Athletes</td><td>$45</td></tr>
+              <tr><td>5 Athletes</td><td>$35</td></tr>
+              <tr><td>6 Athletes</td><td>$35</td></tr>
+              <tr><td>8 Athletes</td><td>$30</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="text-align:center;margin-bottom:64px">
+        <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Small Group Training</a>
+      </div>
+
+      <!-- LACROSSE PERFORMANCE TRAINING PRICING -->
+      <div class="section-header" id="performance-training-pricing" style="padding-top:16px">
+        <span class="label">Performance Training</span>
+        <h2>Lacrosse Performance Training</h2>
+        <p>A higher-level option for athletes who want lacrosse skill work combined with speed, agility, strength, conditioning, and athletic development.</p>
+      </div>
+      <div style="margin-bottom:32px;overflow-x:auto">
+        <div class="card" style="padding:0;overflow:hidden;margin-bottom:24px">
+          <div style="padding:24px 24px 0"><h4>Private Lacrosse Performance Training</h4></div>
+          <table class="group-table">
+            <thead>
+              <tr>
+                <th>Sessions</th>
+                <th>60 Minutes</th>
+                <th>90 Minutes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>6 Sessions</td><td>$480</td><td>$690</td></tr>
+              <tr><td>8 Sessions</td><td>$600</td><td>$880</td></tr>
+              <tr><td>10 Sessions</td><td>$700</td><td>$1,050</td></tr>
+              <tr><td>12 Sessions</td><td>$780</td><td>$1,200</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card" style="padding:0;overflow:hidden">
+          <div style="padding:24px 24px 0"><h4>Small Group Performance Training</h4></div>
+          <table class="group-table">
+            <thead>
+              <tr>
+                <th>Group Size</th>
+                <th>60 Minutes</th>
+                <th>90 Minutes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>2 Athletes</td><td>$130 total</td><td>$150 total</td></tr>
+              <tr><td>3 Athletes</td><td>$165 total</td><td>$210 total</td></tr>
+              <tr><td>4 Athletes</td><td>$180 total</td><td>$240 total</td></tr>
+            </tbody>
+          </table>
+          <p class="muted" style="padding:16px 24px 24px;font-size:14px">For groups larger than 4, pricing can be adjusted based on group size, session length, and training goals.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-bottom:64px">
+        <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Lacrosse Performance Training</a>
       </div>
 
       <!-- ONLINE COACHING PRICING -->
