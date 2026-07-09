@@ -19,6 +19,7 @@
       --border:      #222228;
       --blue:        #3a7bd5;       /* logo blue */
       --blue-light:  #5a9be8;
+      --green:       #34c76c;
       --silver:      #c0c8d8;
       --silver-mid:  #8a96a8;
       --magenta:     #c040a0;       /* logo magenta accent */
@@ -72,6 +73,7 @@
       margin-bottom: 14px;
     }
     .label--silver { color: var(--silver-mid); }
+    .label--lg { font-size: 18px; }
 
     h1,h2,h3,h4 {
       font-family: var(--font-display);
@@ -407,6 +409,16 @@
        SECTION HEADER
        ============================================================ */
     .section-header { margin-bottom: 56px; }
+    .pricing-head { text-align: center; margin-bottom: 36px; }
+    .pricing-head h2 {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    .pricing-head p { margin: 12px auto 0; max-width: 640px; font-size: 15px; line-height: 1.6; color: var(--silver-mid); }
     .section-header--center { text-align: center; }
     .section-header p { margin-top: 16px; max-width: 620px; font-size: 17px; line-height: 1.7; }
     .section-header--center p { margin: 16px auto 0; }
@@ -1071,7 +1083,7 @@
     <div class="container">
       <div class="trust">
         <div>
-          <span class="label">The 7s Lacrosse Approach</span>
+          <span class="label label--lg">The 7s Lacrosse Approach</span>
           <h2>Structured Training.<br />Clear Progress.<br />Real Development.</h2>
           <p style="color:var(--silver-mid);font-size:17px;line-height:1.75;margin-top:20px">Sevens Lacrosse is not built around random drills. Every session has a purpose. Athletes work on specific skills, learn why those skills matter, and build habits that carry into games.</p>
           <p style="color:var(--silver-mid);font-size:17px;line-height:1.75;margin-top:14px">Training sessions can include stick skills, shooting, passing, dodging, footwork, speed, agility, strength habits, lacrosse IQ. Sessions always include confidence building! Home practice is assigned between sessions.</p>
@@ -1089,7 +1101,7 @@
   <section class="section section--dark">
     <div class="container">
       <div class="section-header section-header--center">
-        <span class="label">Training Options</span>
+        <span class="label label--lg">Training Options</span>
         <h2>Three Ways to Train</h2>
         <p>Choose the format that fits the athlete's goals, schedule, and experience level.</p>
       </div>
@@ -1122,7 +1134,7 @@
       <div class="trust">
         <img src="images/small-group-training.png" alt="Youth lacrosse players in small group training" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block" />
         <div>
-          <span class="label">Who It's For</span>
+          <span class="label label--lg">Who It's For</span>
           <h2>Who Is This Training For?</h2>
           <p style="color:var(--silver-mid);font-size:16px;line-height:1.75;margin-top:16px">7s Lacrosse is built for elementary, middle school, and high school athletes. Training is available for beginners learning the game, experienced players sharpening their skills, club players looking for extra work, and serious athletes preparing for the next level.</p>
           <p style="color:var(--silver-mid);font-size:16px;line-height:1.75;margin-top:12px">Sessions are adjusted based on each athlete's age, position, experience level, confidence, and goals. 7s Lacrosse trains both boys and girls.</p>
@@ -1149,7 +1161,7 @@
 
         </div>
         <div class="trust__content">
-          <span class="label">About the <a href="#" onclick="showPage('about')" style="color:var(--blue-light);text-decoration:underline;text-decoration-color:rgba(90,155,232,0.4)">Founder</a></span>
+          <span class="label label--lg">About the <a href="#" onclick="showPage('about')" style="color:var(--blue-light);text-decoration:underline;text-decoration-color:rgba(90,155,232,0.4)">Founder</a></span>
           <h2>Coach Alex DeLierre</h2>
           <p>Coach Alex is currently a student-athlete at Stockton University in Galloway, NJ. He is a senior studying Exercise Science. He has over 15 years of competitive lacrosse experience as an attackman and seven years of experience coaching youth players.</p>
           <p style="margin-top:14px">In 2026, Alex was named USA Lacrosse Magazine All-America Honorable Mention.</p>
@@ -1169,7 +1181,7 @@
   <section class="section">
     <div class="container">
       <div class="section-header section-header--center">
-        <span class="label">Testimonials</span>
+        <span class="label label--lg">Testimonials</span>
         <h2>Clients In Their Own Words</h2>
         <p>Hear from athletes and families who have trained with 7s Lacrosse.</p>
       </div>
@@ -1183,7 +1195,7 @@
   <section class="section section--dark">
     <div class="container">
       <div class="section-header section-header--center">
-        <span class="label">Questions</span>
+        <span class="label label--lg">Questions</span>
         <h2>Have <a href="#" onclick="showPage('faq')" style="color:inherit;text-decoration:underline;text-decoration-color:rgba(90,155,232,0.4)">Questions</a>?</h2>
         <p>Learn more about training options, age groups, what athletes should bring, online coaching, payments, scheduling, and how sessions work.</p>
       </div>
@@ -1493,185 +1505,199 @@
         </div>
       </div>
 
-      <div class="section-header" id="private-training-pricing" style="padding-top:16px">
-        <span class="label">Individual Training</span>
-        <h2>Private Training Packages</h2>
-        <p>For 1 athlete. Choose a session length below.</p>
+      <!-- TRAIN ALL YEAR -->
+      <div class="pricing-head" style="padding-top:16px">
+        <h2>Train All Year</h2>
       </div>
-      <div class="pricing-grid" style="margin-bottom:64px">
-        <div class="pricing-card">
-          <h3>60-Minute Training</h3>
-          <p class="pricing-card__sub">1 athlete · 60-minute sessions</p>
-          <div class="pricing-rows">
-            <div class="pricing-row"><span class="pricing-row__sessions">6 Sessions</span><div><div class="pricing-row__total">$390</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">8 Sessions</span><div><div class="pricing-row__total">$512</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">10 Sessions<span class="pricing-row__tag">Most Popular</span></span><div><div class="pricing-row__total">$600</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">12 Sessions</span><div><div class="pricing-row__total">$696</div></div></div>
+      <div class="pricing-card pricing-card--featured" style="position:relative;margin-bottom:64px">
+        <div class="pricing-card__badge">The complete plan</div>
+        <h3 style="margin-bottom:6px">Year-round athlete</h3>
+        <p class="pricing-card__sub">Summer training in person. Online coaching during the school year. One plan, no off-season.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px">
+          <div style="background:rgba(0,0,0,0.2);border-radius:12px;padding:20px">
+            <div style="font-size:13px;color:var(--muted);margin-bottom:6px">Summer</div>
+            <div style="font-family:var(--font-display);font-size:17px;font-weight:700;color:var(--white)">10-session package · $600</div>
           </div>
-        </div>
-        <div class="pricing-card pricing-card--featured">
-          <div class="pricing-card__badge">Most Complete</div>
-          <h3>90-Minute Training</h3>
-          <p class="pricing-card__sub">1 athlete · 90-minute sessions</p>
-          <div class="pricing-rows">
-            <div class="pricing-row"><span class="pricing-row__sessions">6 Sessions</span><div><div class="pricing-row__total">$540</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">8 Sessions</span><div><div class="pricing-row__total">$704</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">10 Sessions<span class="pricing-row__tag">Most Popular</span></span><div><div class="pricing-row__total">$850</div></div></div>
-            <div class="pricing-row"><span class="pricing-row__sessions">12 Sessions</span><div><div class="pricing-row__total">$960</div></div></div>
+          <div style="background:rgba(0,0,0,0.2);border-radius:12px;padding:20px">
+            <div style="font-size:13px;color:var(--muted);margin-bottom:6px">September through May</div>
+            <div style="font-family:var(--font-display);font-size:17px;font-weight:700;color:var(--white)">Online Coaching Plus · $150/mo</div>
           </div>
         </div>
       </div>
 
-      <div class="section-header">
-        <span class="label">Groups</span>
+      <!-- SMALL GROUP TRAINING -->
+      <div class="pricing-head">
         <h2>Small Group Training</h2>
-        <p>Available for siblings, friends, teammates, or parent-organized groups. Prices shown are per athlete, per session.</p>
+        <p>Siblings, friends, or teammates. Priced per athlete, 60-minute sessions. 90-minute groups available.</p>
       </div>
-      <div style="margin-bottom:32px;overflow-x:auto">
-        <div class="card" style="padding:0;overflow:hidden;margin-bottom:24px">
-          <div style="padding:24px 24px 0"><h4>60-Minute Small Group</h4></div>
-          <table class="group-table">
-            <thead>
-              <tr>
-                <th>Group Size</th>
-                <th>Per Athlete</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>2 Athletes</td><td>$45</td></tr>
-              <tr><td>3 Athletes</td><td>$40</td></tr>
-              <tr><td>4 Athletes</td><td>$35</td></tr>
-              <tr><td>5 Athletes</td><td>$30</td></tr>
-              <tr><td>6 Athletes</td><td>$30</td></tr>
-              <tr><td>8 Athletes</td><td>$30</td></tr>
-            </tbody>
-          </table>
+      <div class="cards-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:64px">
+        <div class="card" style="text-align:center">
+          <div style="font-size:15px;color:var(--silver-mid);margin-bottom:8px">2 athletes</div>
+          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white)">$45</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete</div>
         </div>
-        <div class="card" style="padding:0;overflow:hidden">
-          <div style="padding:24px 24px 0"><h4>90-Minute Small Group</h4></div>
-          <table class="group-table">
-            <thead>
-              <tr>
-                <th>Group Size</th>
-                <th>Per Athlete</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>2 Athletes</td><td>$55</td></tr>
-              <tr><td>3 Athletes</td><td>$50</td></tr>
-              <tr><td>4 Athletes</td><td>$45</td></tr>
-              <tr><td>5 Athletes</td><td>$35</td></tr>
-              <tr><td>6 Athletes</td><td>$35</td></tr>
-              <tr><td>8 Athletes</td><td>$30</td></tr>
-            </tbody>
-          </table>
+        <div class="card" style="text-align:center">
+          <div style="font-size:15px;color:var(--silver-mid);margin-bottom:8px">3 athletes</div>
+          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white)">$40</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete</div>
         </div>
-      </div>
-      <div style="text-align:center;margin-bottom:64px">
-        <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Small Group Training</a>
+        <div class="card pricing-card--featured" style="text-align:center;position:relative">
+          <div class="pricing-card__badge">Best value</div>
+          <div style="font-size:15px;color:var(--silver-mid);margin-bottom:8px">4 athletes</div>
+          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white)">$35</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete</div>
+        </div>
+        <div class="card" style="text-align:center">
+          <div style="font-size:15px;color:var(--silver-mid);margin-bottom:8px">5+ athletes</div>
+          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white)">$30</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete</div>
+        </div>
       </div>
 
-      <!-- LACROSSE PERFORMANCE TRAINING PRICING -->
-      <div class="section-header" id="performance-training-pricing" style="padding-top:16px">
-        <span class="label">Performance Training</span>
-        <h2>Lacrosse Performance Training</h2>
-        <p>A higher-level option for athletes who want lacrosse skill work combined with speed, agility, strength, conditioning, and athletic development.</p>
+      <!-- PRIVATE 60 MIN -->
+      <div class="pricing-head" id="private-training-pricing">
+        <h2>Private Lacrosse Training — 60 Min</h2>
+        <p>One-on-one skill work built around your athlete's position and goals.</p>
       </div>
-      <div style="margin-bottom:32px;overflow-x:auto">
-        <div class="card" style="padding:0;overflow:hidden;margin-bottom:24px">
-          <div style="padding:24px 24px 0"><h4>Private Lacrosse Performance Training</h4></div>
-          <table class="group-table">
-            <thead>
-              <tr>
-                <th>Sessions</th>
-                <th>60 Minutes</th>
-                <th>90 Minutes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>6 Sessions</td><td>$480</td><td>$690</td></tr>
-              <tr><td>8 Sessions</td><td>$600</td><td>$880</td></tr>
-              <tr><td>10 Sessions</td><td>$700</td><td>$1,050</td></tr>
-              <tr><td>12 Sessions</td><td>$780</td><td>$1,200</td></tr>
-            </tbody>
-          </table>
+      <div class="cards-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:8px">
+        <div class="card">
+          <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">6 sessions</div>
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$390</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px">$65 / session</div>
+          <div style="font-size:13px;color:var(--green);margin-top:4px">Save $120</div>
         </div>
-        <div class="card" style="padding:0;overflow:hidden">
-          <div style="padding:24px 24px 0"><h4>Small Group Performance Training</h4></div>
-          <table class="group-table">
-            <thead>
-              <tr>
-                <th>Group Size</th>
-                <th>60 Minutes</th>
-                <th>90 Minutes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>2 Athletes</td><td>$130 total</td><td>$150 total</td></tr>
-              <tr><td>3 Athletes</td><td>$165 total</td><td>$210 total</td></tr>
-              <tr><td>4 Athletes</td><td>$180 total</td><td>$240 total</td></tr>
-            </tbody>
-          </table>
-          <p class="muted" style="padding:16px 24px 24px;font-size:14px">For groups larger than 4, pricing can be adjusted based on group size, session length, and training goals.</p>
+        <div class="card">
+          <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">8 sessions</div>
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$512</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px">$64 / session</div>
+          <div style="font-size:13px;color:var(--green);margin-top:4px">Save $168</div>
+        </div>
+        <div class="card pricing-card--featured" style="position:relative">
+          <div class="pricing-card__badge">Most popular</div>
+          <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">10 sessions</div>
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$600</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px">$60 / session</div>
+          <div style="font-size:13px;color:var(--green);margin-top:4px">Save $250</div>
+        </div>
+        <div class="card">
+          <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">12 sessions</div>
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$696</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px">$58 / session</div>
+          <div style="font-size:13px;color:var(--green);margin-top:4px">Save $324</div>
         </div>
       </div>
-      <div style="text-align:center;margin-bottom:64px">
-        <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Lacrosse Performance Training</a>
+      <p style="font-size:14px;color:var(--muted);text-align:center;margin-bottom:64px">Training all summer? 16, 20, and 24 session packages available — just ask.</p>
+
+      <!-- PRIVATE 90 MIN -->
+      <div class="pricing-head">
+        <h2>Private Lacrosse Training — 90 Min</h2>
+        <p>Extended sessions for athletes who want more reps and deeper skill work.</p>
+      </div>
+      <div class="cards-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:64px">
+        <div class="card">
+          <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">6 sessions</div>
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$540</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px">$90 / session</div>
+          <div style="font-size:13px;color:var(--green);margin-top:4px">Save $210</div>
+        </div>
+        <div class="card">
+          <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">8 sessions</div>
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$704</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px">$88 / session</div>
+          <div style="font-size:13px;color:var(--green);margin-top:4px">Save $296</div>
+        </div>
+        <div class="card pricing-card--featured" style="position:relative">
+          <div class="pricing-card__badge">Most popular</div>
+          <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">10 sessions</div>
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$850</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px">$85 / session</div>
+          <div style="font-size:13px;color:var(--green);margin-top:4px">Save $400</div>
+        </div>
+        <div class="card">
+          <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">12 sessions</div>
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$960</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px">$80 / session</div>
+          <div style="font-size:13px;color:var(--green);margin-top:4px">Save $540</div>
+        </div>
       </div>
 
-      <!-- ONLINE COACHING PRICING -->
+      <!-- LACROSSE PERFORMANCE TRAINING -->
+      <div class="pricing-head" id="performance-training-pricing">
+        <h2>Lacrosse Performance Training — 90 Min</h2>
+        <p>Our most complete option: Skills plus speed, agility, strength, and conditioning.</p>
+      </div>
+      <div class="cards-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:64px">
+        <div class="card">
+          <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">6 sessions</div>
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$480</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px">$80 / session</div>
+          <div style="font-size:13px;color:var(--green);margin-top:4px">Save $30</div>
+        </div>
+        <div class="card">
+          <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">8 sessions</div>
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$600</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px">$75 / session</div>
+          <div style="font-size:13px;color:var(--green);margin-top:4px">Save $80</div>
+        </div>
+        <div class="card pricing-card--featured" style="position:relative">
+          <div class="pricing-card__badge">Most popular</div>
+          <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">10 sessions</div>
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$700</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px">$70 / session</div>
+          <div style="font-size:13px;color:var(--green);margin-top:4px">Save $150</div>
+        </div>
+        <div class="card">
+          <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">12 sessions</div>
+          <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$780</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px">$65 / session</div>
+          <div style="font-size:13px;color:var(--green);margin-top:4px">Save $240</div>
+        </div>
+      </div>
+
+      <!-- ONLINE COACHING -->
       <div id="online-coaching-pricing" style="padding-top:16px">
-        <div class="section-header">
-          <span class="label">Online Coaching</span>
-          <h2>Online Coaching Pricing</h2>
-          <p>Available year-round for athletes who want structure, feedback, and accountability when in-person training is not available.</p>
+        <div class="pricing-head">
+          <h2>Online Coaching</h2>
+          <p>Structured plans, video feedback, and check-ins. Available year-round, anywhere.</p>
         </div>
-        <div class="cards-grid">
+        <div class="cards-grid" style="margin-bottom:64px">
           <div class="pricing-card" style="background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px">
-            <div style="font-size:32px;margin-bottom:12px">📋</div>
-            <h3 style="font-family:var(--font-display);font-size:22px;color:var(--white);margin-bottom:6px">Online Training Plan</h3>
-            <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:4px">$125<span style="font-size:16px;color:var(--muted);font-weight:400">/month</span></div>
-            <p style="font-size:13px;color:var(--blue-light);font-weight:600;margin-bottom:16px">Best for athletes who need a clear plan to follow on their own.</p>
-            <ul style="list-style:none;padding:0;margin-bottom:20px">
-              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Wall ball plan</li>
-              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Skill work assignments</li>
-              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Speed, strength, or conditioning plan</li>
-              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Structured around age, position &amp; goals</li>
-              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0">✓ &nbsp;General progress adjustments</li>
-            </ul>
-            <p style="font-size:14px;color:var(--muted)">A structured monthly plan so athletes know exactly what to work on outside of team practices or in-person training.</p>
+            <h3 style="font-family:var(--font-display);font-size:22px;color:var(--white);margin-bottom:4px">Online Training Plan</h3>
+            <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:16px">$125<span style="font-size:16px;color:var(--muted);font-weight:400">/mo</span></div>
+            <p style="font-size:14px;color:var(--silver-mid)">Wall ball, skill, and conditioning plans for self-driven athletes.</p>
           </div>
           <div class="pricing-card pricing-card--featured" style="border-radius:var(--radius-lg);padding:32px 28px;position:relative">
-            <div class="pricing-card__badge">Most Support</div>
-            <div style="font-size:32px;margin-bottom:12px">🎯</div>
-            <h3 style="font-family:var(--font-display);font-size:22px;color:var(--white);margin-bottom:6px">Online Coaching Plus</h3>
-            <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:4px">$150<span style="font-size:16px;color:var(--muted);font-weight:400">/month</span></div>
-            <p style="font-size:13px;color:var(--blue-light);font-weight:600;margin-bottom:16px">Best for athletes who want feedback, accountability, and support.</p>
-            <ul style="list-style:none;padding:0;margin-bottom:20px">
-              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.08)">✓ &nbsp;Everything in Online Training Plan</li>
-              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.08)">✓ &nbsp;Additional check-ins</li>
-              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.08)">✓ &nbsp;Video feedback once a week</li>
-              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0">✓ &nbsp;Plan adjustments based on progress</li>
-            </ul>
-            <p style="font-size:14px;color:var(--muted)">Best for athletes who want a plan, feedback, and consistent support instead of just written workouts.</p>
+            <div class="pricing-card__badge">Most popular</div>
+            <h3 style="font-family:var(--font-display);font-size:22px;color:var(--white);margin-bottom:4px">Online Coaching Plus</h3>
+            <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:16px">$150<span style="font-size:16px;color:var(--muted);font-weight:400">/mo</span></div>
+            <p style="font-size:14px;color:var(--silver-mid)">Everything in the plan, plus video feedback and regular check-ins.</p>
           </div>
           <div class="pricing-card" style="background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px">
-            <div style="font-size:32px;margin-bottom:12px">🎥</div>
-            <h3 style="font-family:var(--font-display);font-size:22px;color:var(--white);margin-bottom:6px">Video Review Add-On</h3>
-            <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:4px">$20<span style="font-size:16px;color:var(--muted);font-weight:400">/video</span></div>
-            <p style="font-size:13px;color:var(--blue-light);font-weight:600;margin-bottom:16px">Best for players who only want one clip reviewed.</p>
-            <ul style="list-style:none;padding:0;margin-bottom:20px">
-              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Review of one training or game clip</li>
-              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Specific coaching points</li>
-              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Corrections to focus on</li>
-              <li style="font-size:14px;color:var(--silver-mid);padding:5px 0">✓ &nbsp;Next-step recommendations</li>
-            </ul>
-            <p style="font-size:14px;color:var(--muted)">Best for athletes who want quick feedback on a specific skill, rep, or game situation.</p>
+            <h3 style="font-family:var(--font-display);font-size:22px;color:var(--white);margin-bottom:4px">Video Review</h3>
+            <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:16px">$20<span style="font-size:16px;color:var(--muted);font-weight:400">/video</span></div>
+            <p style="font-size:14px;color:var(--silver-mid)">Send a clip, get a specific breakdown and corrections.</p>
           </div>
         </div>
-        <p class="muted" style="margin-top:24px;text-align:center;max-width:600px;margin-left:auto;margin-right:auto">Not sure which option is best? Submit a training request and Coach Alex can recommend the right online coaching option based on the athlete's age, position, experience, goals, and schedule.</p>
-        <div style="text-align:center;margin-top:24px">
-          <a class="btn btn-primary" href="#" onclick="showPage('request')">Start Online Coaching</a>
+      </div>
+
+      <p style="text-align:center;color:var(--silver-mid);font-size:15px;margin-bottom:64px"><span style="color:var(--green)">✓</span> &nbsp;If the first session isn't a fit, the rest of your package is fully refunded.</p>
+
+      <!-- NEW TO 7s LACROSSE -->
+      <div class="pricing-head">
+        <h2>New to 7s Lacrosse?</h2>
+      </div>
+      <div class="cards-grid--2 cards-grid" style="margin-bottom:64px">
+        <div class="card pricing-card--featured" style="position:relative">
+          <div class="pricing-card__badge">New athletes start here</div>
+          <h3 style="font-family:var(--font-display);font-size:20px;color:var(--white);margin-bottom:4px;margin-top:8px">Intro session + player evaluation</h3>
+          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:8px">$65</div>
+          <p style="font-size:14px;color:var(--silver-mid)">60 minutes. One-time, new athletes only. Includes a written skill evaluation.</p>
+        </div>
+        <div class="card">
+          <div style="font-size:13px;color:var(--muted);margin-bottom:6px">Pay as you go</div>
+          <h3 style="font-family:var(--font-display);font-size:20px;color:var(--white);margin-bottom:4px">Single session</h3>
+          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:8px">$85</div>
+          <p style="font-size:14px;color:var(--silver-mid)">60 minutes ($85) or 90 minutes ($125). No commitment.</p>
         </div>
       </div>
 
