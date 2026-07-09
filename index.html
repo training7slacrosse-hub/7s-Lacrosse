@@ -1486,6 +1486,9 @@
 <div class="page" id="page-pricing">
   <section class="section">
     <div class="container">
+      <!-- PROMO BANNER — remove after July 30th -->
+      <div style="text-align:center;background:rgba(58,123,213,0.12);border:1px solid rgba(58,123,213,0.35);border-radius:12px;padding:12px 20px;margin-bottom:40px;color:var(--white);font-family:var(--font-display);font-weight:700;font-size:15px">⚡ $10 Player Evaluations through July 30th — first 15 athletes only. <a href="#" onclick="document.getElementById('player-evaluation').scrollIntoView({behavior:'smooth',block:'center'})" style="color:var(--blue-light);text-decoration:underline;text-decoration-color:rgba(90,155,232,0.4)">Claim a spot ↓</a></div>
+
       <span class="label">Investment</span>
       <h1 style="font-size:clamp(40px,6vw,72px);margin-bottom:16px">Pricing</h1>
       <p style="font-size:18px;color:var(--silver-mid);max-width:640px;margin-bottom:64px">Training packages are designed to create consistency, structure, and progress. Packages are paid upfront before the first scheduled session.</p>
@@ -1672,11 +1675,21 @@
         <h2>New to 7s Lacrosse?</h2>
       </div>
       <div class="cards-grid--2 cards-grid" style="margin-bottom:64px">
+        <!-- POST-PROMO CARD — swap this back in on July 31st (replace the promo card below):
         <div class="card pricing-card--featured" style="position:relative">
           <div class="pricing-card__badge">New athletes start here</div>
-          <h3 style="font-family:var(--font-display);font-size:20px;color:var(--white);margin-bottom:4px;margin-top:8px">Intro session + player evaluation</h3>
+          <h3 style="font-family:var(--font-display);font-size:20px;color:var(--white);margin-bottom:4px;margin-top:8px">Intro Session + Player Evaluation</h3>
           <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:8px">$65</div>
           <p style="font-size:14px;color:var(--silver-mid)">60 minutes. One-time, new athletes only. Includes a written skill evaluation.</p>
+        </div>
+        -->
+        <div class="card pricing-card--featured" id="player-evaluation" style="position:relative">
+          <div class="pricing-card__badge">Limited time — first 15 athletes</div>
+          <h3 style="font-family:var(--font-display);font-size:20px;color:var(--white);margin-bottom:4px;margin-top:8px">Player Evaluation</h3>
+          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:8px">$10 <span style="font-size:20px;color:var(--muted);text-decoration:line-through;font-weight:700">$65</span> <span style="font-size:13px;color:var(--muted);font-weight:400">until July 30th</span></div>
+          <p style="font-size:14px;color:var(--silver-mid)">30 minutes. Includes a written skill scorecard with specific next steps.</p>
+          <p style="font-size:14px;color:var(--green);margin-top:8px">Your $10 credits toward any package booked within 7 days.</p>
+          <p style="font-size:13px;color:var(--muted);margin-top:8px">Prepay to reserve your spot. One per athlete.</p>
         </div>
         <div class="card">
           <div style="font-size:13px;color:var(--muted);margin-bottom:6px">Pay as you go</div>
