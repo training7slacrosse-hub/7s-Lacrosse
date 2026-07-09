@@ -1113,19 +1113,19 @@
       <div class="cards-grid">
         <div class="card card--highlight">
           <div class="card__icon">🥍</div>
-          <h4>Lacrosse Training</h4>
+          <h4>7s Lacrosse Training</h4>
           <p>Private and small group training focused on stick skills, shooting, dodging, footwork, ground balls, position-specific development, and game IQ.</p>
           <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPage('training')">View Services →</a></div>
         </div>
         <div class="card card--highlight">
           <div class="card__icon">⚡</div>
-          <h4>Performance Training</h4>
+          <h4>7s Performance Training</h4>
           <p>Speed, agility, strength habits, footwork, conditioning, and movement training built around the demands of lacrosse.</p>
           <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPage('training')">View Services →</a></div>
         </div>
         <div class="card card--highlight">
           <div class="card__icon">💻</div>
-          <h4>Online Coaching</h4>
+          <h4>7s Online Coaching</h4>
           <p>Year-round structure for athletes who want wall ball plans, speed or strength plans, video review, check-ins, and accountability outside of in-person training.</p>
           <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPage('online')">View Online Coaching →</a></div>
         </div>
@@ -1272,28 +1272,9 @@
   <section class="section">
     <div class="container">
       <span class="label">Coaching Services</span>
-      <h1 style="font-size:clamp(36px,6vw,72px);margin-bottom:20px">Structured Lacrosse Training<br />Built Around the Athlete</h1>
+      <h1 style="font-size:clamp(36px,6vw,72px);margin-bottom:20px">Personalized Lacrosse Training</h1>
       <p style="font-size:18px;color:var(--silver-mid);max-width:680px;line-height:1.75;margin-bottom:16px">7s Lacrosse offers private, small group, lacrosse performance, and online coaching for youth and high school players who want to improve their skills, athleticism, confidence, and understanding of the game.</p>
       <p style="font-size:17px;color:var(--silver-mid);max-width:680px;line-height:1.75;margin-bottom:48px">Every session is built with a purpose. Athletes are not just running through random drills. They are working on specific skills, learning why those skills matter, and building habits that carry into games.</p>
-
-      <!-- Service overview cards -->
-      <div class="cards-grid">
-        <div class="card card--highlight">
-          <div class="card__icon">🥍</div>
-          <h4>Lacrosse Training</h4>
-          <p>Private and small group sessions focused on stick skills, shooting, dodging, ground balls, footwork, and game IQ.</p>
-        </div>
-        <div class="card card--highlight">
-          <div class="card__icon">⚡</div>
-          <h4>Performance Training</h4>
-          <p>Speed, agility, strength habits, footwork, conditioning, and movement training built around the demands of lacrosse.</p>
-        </div>
-        <div class="card card--highlight">
-          <div class="card__icon">💻</div>
-          <h4>Online Coaching</h4>
-          <p>Year-round structure, wall ball plans, skill and conditioning plans, video feedback, and check-ins.</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -1303,7 +1284,7 @@
       <div class="trust">
         <div>
           <span class="label">One-on-One</span>
-          <h2>Private Lacrosse Training</h2>
+          <h2>7s Private Lacrosse Training</h2>
           <p style="color:var(--silver-mid);margin-top:16px;font-size:16px;line-height:1.75">One-on-one training for athletes who want focused coaching and individual attention.</p>
           <p style="color:var(--silver-mid);margin-top:12px;font-size:16px;line-height:1.75">Private sessions are built around the athlete's age, position, experience level, confidence, and goals. Training may include catching, throwing, cradling, shooting, dodging, footwork, stick protection, ground balls, off-ball movement, and position-specific skill work.</p>
           <p style="color:var(--silver-mid);margin-top:12px;font-size:16px;line-height:1.75">Private training is best for players who need detailed instruction, extra reps, confidence, or a clear development plan.</p>
@@ -1336,7 +1317,7 @@
         <img src="images/small-group-training.png" alt="Youth lacrosse players training in a small group" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block" />
         <div>
           <span class="label">Groups</span>
-          <h2>Small Group Training</h2>
+          <h2>7s Small Group Training</h2>
           <p style="color:var(--silver-mid);margin-top:16px;font-size:16px;line-height:1.75">Small group training is built for siblings, friends, teammates, or parent-organized groups.</p>
           <p style="color:var(--silver-mid);margin-top:12px;font-size:16px;line-height:1.75">These sessions give athletes more energy, competition, and game-like reps while still receiving direct coaching. Groups can be built by age, skill level, position, or team.</p>
           <p style="color:var(--silver-mid);margin-top:12px;font-size:16px;line-height:1.75">Small group training is best for athletes who want to train with others, compete, and improve in a more game-like environment.</p>
@@ -1365,7 +1346,7 @@
     <div class="container">
       <div class="section-header">
         <span class="label">Most Complete Option</span>
-        <h2>Lacrosse Performance Training</h2>
+        <h2>7s Lacrosse Performance Training</h2>
         <p>Focused on combining skill work with speed, agility, strength, conditioning, footwork, and basic nutrition education to support training.</p>
       </div>
       <div class="trust" style="margin-top:0">
@@ -2205,6 +2186,21 @@
     }, 80);
   }
 
+  // Clean URL paths for each page (GitHub Pages serves 404.html for these,
+  // which redirects to /?/<path>; the snippet below restores the clean URL)
+  const pageSlugs = {
+    home: '',
+    training: 'coaching-services',
+    pricing: 'pricing',
+    online: 'online-coaching',
+    about: 'about',
+    testimonials: 'testimonials',
+    faq: 'faq',
+    request: 'request-training'
+  };
+  const slugToPage = {};
+  Object.keys(pageSlugs).forEach(id => { slugToPage[pageSlugs[id]] = id; });
+
   function showPage(pageId, updateUrl) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     const page = document.getElementById('page-' + pageId);
@@ -2213,10 +2209,10 @@
     // Update nav active state
     document.querySelectorAll('.nav__link').forEach(l => l.classList.remove('active'));
 
-    // Update the URL (hash routing — works on GitHub Pages)
+    // Update the URL
     if (updateUrl !== false) {
-      const url = pageId === 'home' ? location.pathname + location.search : '#' + pageId;
-      history.pushState({ page: pageId }, '', url);
+      const slug = pageSlugs[pageId] !== undefined ? pageSlugs[pageId] : pageId;
+      history.pushState({ page: pageId }, '', '/' + slug);
     }
 
     // Scroll to top
@@ -2224,13 +2220,26 @@
   }
 
   // ── URL routing ───────────────────────────────────────────────
+  // Restore clean URL from the 404.html redirect (/?/pricing → /pricing)
+  if (location.search.indexOf('?/') === 0) {
+    history.replaceState(null, '', '/' + location.search.slice(2) + location.hash);
+  }
+
   function routeFromUrl() {
-    let pageId = location.hash.replace('#', '') || 'home';
-    if (!document.getElementById('page-' + pageId)) pageId = 'home';
+    const path = decodeURIComponent(location.pathname).replace(/^\/+|\/+$/g, '').toLowerCase();
+    let pageId;
+    if (path) {
+      pageId = slugToPage[path] || (document.getElementById('page-' + path) ? path : 'home');
+    } else {
+      // Legacy hash URLs (#pricing) — route them and upgrade to the clean path
+      const hash = location.hash.replace('#', '');
+      pageId = document.getElementById('page-' + hash) ? hash : 'home';
+      if (pageId !== 'home') history.replaceState({ page: pageId }, '', '/' + pageSlugs[pageId]);
+    }
     showPage(pageId, false);
   }
   window.addEventListener('popstate', routeFromUrl);
-  if (location.hash) routeFromUrl();
+  if (location.pathname !== '/' || location.hash) routeFromUrl();
 
   // Placeholder href="#" links do their work in onclick — stop the browser
   // from following them, which would clear the hash and re-route to home

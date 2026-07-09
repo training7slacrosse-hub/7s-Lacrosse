@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>7s Lacrosse</title>
+  <script>
+    // GitHub Pages SPA redirect: this file is served for paths that don't
+    // exist as files (e.g. /pricing). It forwards the path to index.html
+    // as a query (/?/pricing), where the router restores the clean URL.
+    location.replace(
+      location.origin + '/?/' +
+      location.pathname.slice(1).replace(/\/$/, '') +
+      location.hash
+    );
+  </script>
+</head>
+<body></body>
+</html>
