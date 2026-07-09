@@ -2214,6 +2214,13 @@
   window.addEventListener('popstate', routeFromUrl);
   if (location.hash) routeFromUrl();
 
+  // Placeholder href="#" links do their work in onclick — stop the browser
+  // from following them, which would clear the hash and re-route to home
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a[href="#"]');
+    if (link) e.preventDefault();
+  });
+
   // ── Mobile menu ───────────────────────────────────────────────
   function toggleMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
