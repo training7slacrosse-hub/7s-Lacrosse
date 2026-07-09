@@ -1135,7 +1135,7 @@
         <img src="images/small-group-training.png" alt="Youth lacrosse players in small group training" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block" />
         <div>
           <span class="label label--lg">Who It's For</span>
-          <h2>Who Is This Training For?</h2>
+          <h2>Who should train with us?</h2>
           <p style="color:var(--silver-mid);font-size:16px;line-height:1.75;margin-top:16px">7s Lacrosse is built for elementary, middle school, and high school athletes. Training is available for beginners learning the game, experienced players sharpening their skills, club players looking for extra work, and serious athletes preparing for the next level.</p>
           <p style="color:var(--silver-mid);font-size:16px;line-height:1.75;margin-top:12px">Sessions are adjusted based on each athlete's age, position, experience level, confidence, and goals. 7s Lacrosse trains both boys and girls.</p>
           <div class="mt-8">
@@ -1485,26 +1485,6 @@
       <h1 style="font-size:clamp(40px,6vw,72px);margin-bottom:16px">Pricing</h1>
       <p style="font-size:18px;color:var(--silver-mid);max-width:640px;margin-bottom:64px">Training packages are designed to create consistency, structure, and progress. Packages are paid upfront before the first scheduled session.</p>
 
-      <div class="cards-grid--2 cards-grid" style="margin-bottom:64px">
-        <div class="card">
-          <div class="card__icon">💳</div>
-          <h4>Payment Methods</h4>
-          <div class="equip-list mt-4">
-            <div class="equip-item">Cash</div>
-            <div class="equip-item">Check</div>
-            <div class="equip-item">Venmo</div>
-            <div class="equip-item">ACH</div>
-          </div>
-          <p class="muted mt-4">Training packages are paid upfront before the first session.</p>
-        </div>
-        <div class="card">
-          <div class="card__icon">🌧️</div>
-          <h4>Cancellation &amp; Weather Policy</h4>
-          <p style="margin-top:8px;font-size:15px;color:var(--silver-mid)">Please provide at least 24 hours' notice if an athlete needs to miss a scheduled session. Sessions missed without proper notice may be forfeited.</p>
-          <p style="margin-top:12px;font-size:15px;color:var(--silver-mid)">Weather or unsafe field conditions can be rescheduled.</p>
-        </div>
-      </div>
-
       <!-- TRAIN ALL YEAR -->
       <div class="pricing-head" style="padding-top:16px">
         <h2>Train All Year</h2>
@@ -1698,6 +1678,26 @@
           <h3 style="font-family:var(--font-display);font-size:20px;color:var(--white);margin-bottom:4px">Single session</h3>
           <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:8px">$85</div>
           <p style="font-size:14px;color:var(--silver-mid)">60 minutes ($85) or 90 minutes ($125). No commitment.</p>
+        </div>
+      </div>
+
+      <div class="cards-grid--2 cards-grid" style="margin-bottom:64px">
+        <div class="card">
+          <div class="card__icon">💳</div>
+          <h4>Payment Methods</h4>
+          <div class="equip-list mt-4">
+            <div class="equip-item">Cash</div>
+            <div class="equip-item">Check</div>
+            <div class="equip-item">Venmo</div>
+            <div class="equip-item">ACH</div>
+          </div>
+          <p class="muted mt-4">Training packages are paid upfront before the first session.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🌧️</div>
+          <h4>Cancellation &amp; Weather Policy</h4>
+          <p style="margin-top:8px;font-size:15px;color:var(--silver-mid)">Please provide at least 24 hours' notice if an athlete needs to miss a scheduled session. Sessions missed without proper notice may be forfeited.</p>
+          <p style="margin-top:12px;font-size:15px;color:var(--silver-mid)">Weather or unsafe field conditions can be rescheduled.</p>
         </div>
       </div>
 
@@ -2187,7 +2187,7 @@
     }, 80);
   }
 
-  function showPage(pageId) {
+  function showPage(pageId, updateUrl) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     const page = document.getElementById('page-' + pageId);
     if (page) page.classList.add('active');
@@ -2195,9 +2195,24 @@
     // Update nav active state
     document.querySelectorAll('.nav__link').forEach(l => l.classList.remove('active'));
 
+    // Update the URL (hash routing — works on GitHub Pages)
+    if (updateUrl !== false) {
+      const url = pageId === 'home' ? location.pathname + location.search : '#' + pageId;
+      history.pushState({ page: pageId }, '', url);
+    }
+
     // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  // ── URL routing ───────────────────────────────────────────────
+  function routeFromUrl() {
+    let pageId = location.hash.replace('#', '') || 'home';
+    if (!document.getElementById('page-' + pageId)) pageId = 'home';
+    showPage(pageId, false);
+  }
+  window.addEventListener('popstate', routeFromUrl);
+  if (location.hash) routeFromUrl();
 
   // ── Mobile menu ───────────────────────────────────────────────
   function toggleMenu() {
