@@ -211,6 +211,61 @@
     .nav__link.active { color: var(--blue-light); }
     .nav__cta { margin-left: 8px; padding: 10px 20px; font-size: 15px; }
 
+    /* Services dropdown */
+    .nav__dropdown { position: relative; display: flex; align-items: center; }
+    .nav__dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 250px;
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 8px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(6px);
+      transition: opacity 0.15s, transform 0.15s, visibility 0.15s;
+      z-index: 300;
+    }
+    .nav__dropdown:hover .nav__dropdown-menu,
+    .nav__dropdown:focus-within .nav__dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .nav__dropdown-menu .nav__link { display: block; padding: 10px 14px; }
+    .nav__sublink { padding-left: 28px !important; font-size: 15px !important; color: var(--muted); }
+
+    /* Footer nav columns */
+    .footer-cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      max-width: 760px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+    .footer-cols h5 {
+      font-size: 13px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-family: var(--font-body);
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    .footer-cols a {
+      display: block;
+      color: var(--silver-mid);
+      font-size: 15px;
+      padding: 4px 0;
+      transition: color 0.15s;
+    }
+    .footer-cols a:hover { color: var(--white); }
+    @media (max-width: 640px) { .footer-cols { grid-template-columns: 1fr; gap: 28px; } }
+
     /* Mobile menu */
     .nav__hamburger {
       display: none;
@@ -1002,12 +1057,17 @@
 
     <div class="nav__links">
       <a class="nav__link" href="#" onclick="showPage('home')">Home</a>
-      <a class="nav__link" href="#" onclick="showPage('training')">Coaching Services</a>
-      <a class="nav__link" href="#" onclick="showPage('pricing')">Pricing</a>
-      <a class="nav__link" href="#" onclick="showPage('online')">Online Coaching</a>
+      <div class="nav__dropdown">
+        <a class="nav__link" href="#" onclick="showPage('training')">Services <span style="font-size:10px;vertical-align:2px">▾</span></a>
+        <div class="nav__dropdown-menu">
+          <a class="nav__link" href="#" onclick="showPageSection('training','lacrosse-training')">Lacrosse Training</a>
+          <a class="nav__link" href="#" onclick="showPageSection('training','performance-training')">Speed, Strength, Conditioning</a>
+          <a class="nav__link" href="#" onclick="showPage('online')">Online Training</a>
+        </div>
+      </div>
       <a class="nav__link" href="#" onclick="showPage('about')">About</a>
+      <a class="nav__link" href="#" onclick="showPage('pricing')">Pricing</a>
       <a class="nav__link" href="#" onclick="showPage('testimonials')">Testimonials</a>
-      <a class="nav__link" href="#" onclick="showPage('faq')">FAQ</a>
       <a class="btn btn-primary nav__cta" href="#" onclick="showPage('request')">Request Training</a>
     </div>
 
@@ -1018,12 +1078,13 @@
 
   <div class="nav__mobile" id="mobileMenu">
     <a class="nav__link" href="#" onclick="showPage('home');closeMenu()">Home</a>
-    <a class="nav__link" href="#" onclick="showPage('training');closeMenu()">Coaching Services</a>
-    <a class="nav__link" href="#" onclick="showPage('pricing');closeMenu()">Pricing</a>
-    <a class="nav__link" href="#" onclick="showPage('online');closeMenu()">Online Coaching</a>
+    <a class="nav__link" href="#" onclick="showPage('training');closeMenu()">Services</a>
+    <a class="nav__link nav__sublink" href="#" onclick="showPageSection('training','lacrosse-training');closeMenu()">Lacrosse Training</a>
+    <a class="nav__link nav__sublink" href="#" onclick="showPageSection('training','performance-training');closeMenu()">Speed, Strength, Conditioning</a>
+    <a class="nav__link nav__sublink" href="#" onclick="showPage('online');closeMenu()">Online Training</a>
     <a class="nav__link" href="#" onclick="showPage('about');closeMenu()">About</a>
+    <a class="nav__link" href="#" onclick="showPage('pricing');closeMenu()">Pricing</a>
     <a class="nav__link" href="#" onclick="showPage('testimonials');closeMenu()">Testimonials</a>
-    <a class="nav__link" href="#" onclick="showPage('faq');closeMenu()">FAQ</a>
     <a class="btn btn-primary" href="#" onclick="showPage('request');closeMenu()">Request Training</a>
   </div>
 </nav>
@@ -1042,13 +1103,15 @@
   <section class="hero">
     <div class="container hero__inner">
       <h1 class="hero-title">
-        <span>Structured and Personalized</span>
+        <span>Personalized and</span>
+        <span>Complete</span>
         <span class="gradient-text">Lacrosse Player</span>
         <span>Development</span>
       </h1>
-      <p class="hero__sub">Comprehensive training for players 8-18 years old.</p>
+      <p class="hero__sub">Structured coaching for lacrosse players ages 8 to 18.</p>
+      <p class="hero__location" style="margin-bottom:28px"><strong>Lacrosse Skills</strong> &nbsp;·&nbsp; <strong>Speed, Strength &amp; Conditioning</strong> &nbsp;·&nbsp; <strong>Online Training</strong></p>
       <div class="hero__buttons">
-        <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Training</a>
+        <a class="btn btn-primary" href="#" onclick="showPage('request')">Sign Up Today!</a>
         <a class="btn btn-outline" href="#" onclick="showPage('training')">View Services</a>
         <a class="btn btn-outline" href="#" onclick="showPage('pricing')">See Pricing</a>
       </div>
@@ -1068,7 +1131,7 @@
       </div>
       <div>
         <div class="stat__num" style="font-size:clamp(13px,1.8vw,22px);line-height:1.2">2026 USA Lacrosse<span style="display:block">Magazine</span></div>
-        <div class="stat__label">All-American Nominee</div>
+        <div class="stat__label">All-American Honorable Mention</div>
       </div>
       <div>
         <div class="stat__num" style="font-size:clamp(14px,1.8vw,24px);line-height:1.2">26–27 Season</div>
@@ -1082,11 +1145,11 @@
     <div class="container">
       <div class="trust">
         <div>
-          <span class="label label--lg">Why Choose 7s Lacrosse?</span>
-          <h2>Structured Training.<br />Clear Progress.<br />Real Development.</h2>
-          <p style="color:var(--silver-mid);font-size:17px;line-height:1.75;margin-top:20px">Sevens Lacrosse is not built around random drills. Every session has a purpose. Athletes work on specific skills, learn why those skills matter, and build habits that carry into games.</p>
-          <p style="color:var(--silver-mid);font-size:17px;line-height:1.75;margin-top:14px">Training sessions can include stick skills, shooting, passing, dodging, footwork, speed, agility, strength habits, lacrosse IQ. Sessions always include confidence building! Home practice is assigned between sessions.</p>
-          <p style="color:var(--silver-mid);font-size:17px;line-height:1.75;margin-top:14px">Players can be evaluated through the proprietary <strong style="color:var(--silver)">7s Player Progression System</strong> — a structured approach that helps athletes and parents understand current ability, areas for improvement, and the next step in development.</p>
+          <span class="label label--lg">Why Sevens Lacrosse?</span>
+          <h2>One-stop shop for complete athlete training.</h2>
+          <p style="color:var(--silver-mid);font-size:17px;line-height:1.75;margin-top:20px">Structured and documented training that accelerates player development. Sevens Lacrosse prepares players to become complete athletes who are ready to meet the demands of the sport and play competitively long term.</p>
+          <p style="color:var(--silver-mid);font-size:17px;line-height:1.75;margin-top:14px">Players who join Sevens Lacrosse are evaluated and placed into our proprietary <strong style="color:var(--silver)">7s Player Progression System [7s PPS]</strong>. This structured approach makes it easy for coaches, parents, and players to understand how the athlete is progressing, what the next priority is, and how the training plan is being adjusted.</p>
+          <p style="color:var(--silver-mid);font-size:17px;line-height:1.75;margin-top:14px">Our reporting system tracks the player's skill level and outlines the training plan. The plan is comprehensive, personalized, and constantly adjusted based on the player's commitment, progress, and training consistency.</p>
           <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
             <span style="display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border:1px solid rgba(58,123,213,0.35);border-radius:999px;background:rgba(58,123,213,0.08);color:var(--white);font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:0.06em;text-transform:uppercase">🥍 Lacrosse Work</span>
             <span style="display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border:1px solid rgba(58,123,213,0.35);border-radius:999px;background:rgba(58,123,213,0.08);color:var(--white);font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:0.06em;text-transform:uppercase">⚡ Athletic Development</span>
@@ -1106,51 +1169,26 @@
     <div class="container">
       <div class="section-header section-header--center">
         <span class="label label--lg">Training Options</span>
-        <h2>Three Ways to Train</h2>
-        <p>Choose 1 or all three coaching services</p>
+        <h2>Choose One or All Three Coaching Services</h2>
       </div>
       <div class="cards-grid">
         <div class="card card--highlight">
           <div class="card__icon">🥍</div>
           <h4>7s Lacrosse Training</h4>
           <p>Private and small group training focused on stick skills, shooting, dodging, footwork, ground balls, position-specific development, and game IQ.</p>
-          <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPage('training')">View Services →</a></div>
+          <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPageSection('training','lacrosse-training')">Learn More →</a></div>
         </div>
         <div class="card card--highlight">
           <div class="card__icon">⚡</div>
           <h4>7s Performance Training</h4>
-          <p>Speed, strength, conditioning, mobility, and footwork designed around the demands of lacrosse.</p>
-          <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPage('training')">View Services →</a></div>
+          <p>Speed, strength, conditioning, and mobility specifically designed for the demands of lacrosse.</p>
+          <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPageSection('training','performance-training')">Learn More →</a></div>
         </div>
         <div class="card card--highlight">
           <div class="card__icon">💻</div>
           <h4>7s Online Coaching</h4>
           <p>Year-round programming for players who are comfortable using video tools to continue training consistently.</p>
-          <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPage('online')">View Online Coaching →</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── WHO IT'S FOR ───────────────────────────────────────── -->
-  <section class="section">
-    <div class="container">
-      <div class="trust">
-        <img src="images/small-group-training.png" alt="Youth lacrosse players in small group training" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block" />
-        <div>
-          <span class="label label--lg">Who can benefit?</span>
-          <h2>Players who want a one-stop shop for training.</h2>
-          <p style="color:var(--silver-mid);font-size:16px;line-height:1.75;margin-top:16px">7s Lacrosse is designed for elementary, middle school, and high school athletes. Training is available for beginners learning the game, experienced players sharpening their skills, club players looking for extra work, and serious athletes preparing for the next level.</p>
-          <p style="color:var(--silver-mid);font-size:16px;line-height:1.75;margin-top:12px">Sessions are adjusted based on each athlete's age, position, experience level, confidence, and goals. 7s Lacrosse trains both boys and girls.</p>
-          <div class="mt-8">
-            <div class="position-badges">
-              <span class="pos-badge">Attack</span>
-              <span class="pos-badge">Midfield</span>
-            </div>
-          </div>
-          <div class="mt-8" style="display:flex;gap:12px;flex-wrap:wrap">
-            <a class="btn btn-primary" href="#" onclick="showPage('training')">View Training Options</a>
-          </div>
+          <div class="card__link"><a class="btn btn-ghost" href="#" onclick="showPage('online')">Learn More →</a></div>
         </div>
       </div>
     </div>
@@ -1165,10 +1203,11 @@
 
         </div>
         <div class="trust__content">
-          <span class="label label--lg">About the <a href="#" onclick="showPage('about')" style="color:var(--blue-light);text-decoration:underline;text-decoration-color:rgba(90,155,232,0.4)">Founder</a></span>
+          <span class="label label--lg">About The <a href="#" onclick="showPage('about')" style="color:var(--blue-light);text-decoration:underline;text-decoration-color:rgba(90,155,232,0.4)">Founder</a></span>
           <h2>Coach Alex DeLierre</h2>
-          <p>Coach Alex is currently a student-athlete at Stockton University in Galloway, NJ. He is a senior studying Exercise Science. He has over 15 years of competitive lacrosse experience as an attackman and seven years of experience coaching youth players.</p>
-          <p style="margin-top:14px">In 2026, Coach Alex received an All-American Honorable Mention from USA Lacrosse Magazine.</p>
+          <p>Coach Alex is currently a senior student-athlete at Stockton University in Galloway, NJ, majoring in Exercise Science. He has over 15 years of competitive lacrosse experience as an attackman and seven years of experience coaching youth players.</p>
+          <p style="margin-top:14px">He is also a USA Lacrosse certified coach.</p>
+          <p style="margin-top:14px">In 2026, Coach Alex received an All-American Honorable Mention from USA Lacrosse Magazine, along with All-Academic and All-Conference honors.</p>
           <div class="trust__achievements" style="margin-top:24px">
             <div class="achievement"><div class="achievement__num">57<span>G</span></div><div class="achievement__label">2026 Goals</div></div>
             <div class="achievement"><div class="achievement__num">62<span>PTS</span></div><div class="achievement__label">2026 Points</div></div>
@@ -1217,9 +1256,9 @@
         <h2>Ready to Start Training?</h2>
         <p>Request training today and Coach Alex will help determine the best option based on the athlete's age, experience level, goals, and schedule.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px">
-          <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Training</a>
+          <a class="btn btn-primary" href="#" onclick="showPage('request')">Request Training Info</a>
           <a class="btn btn-outline" href="#" onclick="showPage('pricing')">View Pricing</a>
-          <a class="btn btn-outline" href="#" onclick="showPage('request')">Contact</a>
+          <a class="btn btn-outline" href="mailto:training7slacrosse@gmail.com">Contact Us</a>
         </div>
         <p class="muted mt-4">Or email <a href="mailto:training7slacrosse@gmail.com" style="color:var(--blue-light)">training7slacrosse@gmail.com</a></p>
       </div>
@@ -1278,7 +1317,7 @@
   </section>
 
   <!-- PRIVATE LACROSSE TRAINING -->
-  <section class="section section--dark">
+  <section class="section section--dark" id="lacrosse-training">
     <div class="container">
       <div class="trust">
         <div>
@@ -1341,7 +1380,7 @@
   </section>
 
   <!-- HYBRID PERFORMANCE TRAINING -->
-  <section class="section section--dark">
+  <section class="section section--dark" id="performance-training">
     <div class="container">
       <div class="section-header">
         <span class="label label--lg">Players Need More Than Stick Skills</span>
@@ -1387,7 +1426,7 @@
   </section>
 
   <!-- ONLINE COACHING -->
-  <section class="section">
+  <section class="section" id="online-training">
     <div class="container">
       <div class="section-header">
         <span class="label label--lg">Year-Round</span>
@@ -2161,11 +2200,30 @@
      ============================================================ -->
 <footer class="footer">
   <div class="container">
-    <div style="text-align:center;padding:48px 0 32px">
-      <p style="font-size:13px;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em">Contact</p>
-      <p style="margin-bottom:8px"><a href="mailto:training7slacrosse@gmail.com" style="color:var(--blue-light);font-size:15px">training7slacrosse@gmail.com</a></p>
-      <p style="margin-bottom:32px"><a href="https://instagram.com/7slacrosse" target="_blank" rel="noopener" style="color:var(--muted);font-size:15px">@7slacrosse on Instagram</a></p>
-      <p style="font-size:13px;color:var(--muted)">© 2026 7s Lacrosse. All rights reserved.</p>
+    <div style="padding:48px 0 32px">
+      <div class="footer-cols">
+        <div>
+          <h5>Menu</h5>
+          <a href="#" onclick="showPage('home')">Home</a>
+          <a href="#" onclick="showPage('training')">Services</a>
+          <a href="#" onclick="showPage('about')">About</a>
+          <a href="#" onclick="showPage('pricing')">Pricing</a>
+          <a href="#" onclick="showPage('testimonials')">Testimonials</a>
+          <a href="#" onclick="showPage('faq')">FAQ</a>
+        </div>
+        <div>
+          <h5>Services</h5>
+          <a href="#" onclick="showPageSection('training','lacrosse-training')">Lacrosse Training</a>
+          <a href="#" onclick="showPageSection('training','performance-training')">Speed, Strength, Conditioning</a>
+          <a href="#" onclick="showPage('online')">Online Training</a>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <a href="mailto:training7slacrosse@gmail.com" style="color:var(--blue-light)">training7slacrosse@gmail.com</a>
+          <a href="https://instagram.com/7slacrosse" target="_blank" rel="noopener">@7slacrosse on Instagram</a>
+        </div>
+      </div>
+      <p style="font-size:13px;color:var(--muted);text-align:center">© 2026 7s Lacrosse. All rights reserved.</p>
     </div>
   </div>
 </footer>
