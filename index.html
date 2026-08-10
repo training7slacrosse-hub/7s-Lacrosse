@@ -41,7 +41,7 @@
       --radius:  8px;
       --radius-lg: 16px;
       --max-w:   1160px;
-      --section-gap: 96px;
+      --section-gap: 68px;
     }
 
     /* ============================================================
@@ -165,7 +165,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 64px;
+      /* Tall enough that the wide logo lockup fills the bar instead of
+         floating in it; scales down on narrow screens. */
+      height: clamp(68px, 6.2vw, 88px);
       gap: 16px;
     }
     .nav__logo {
@@ -173,6 +175,12 @@
       align-items: center;
       gap: 10px;
       flex-shrink: 0;
+    }
+    /* width:auto keeps the lockup's 2.28:1 proportions — never stretched. */
+    .nav__logo-img {
+      height: clamp(52px, 4.9vw, 70px);
+      width: auto;
+      display: block;
     }
     /* Logo mark using the 7s mark as text */
     .nav__logo-mark {
@@ -332,7 +340,9 @@
        HOME — HERO
        ============================================================ */
     .hero {
-      min-height: 100vh;
+      /* Sized by its content, not the viewport. min-height:100vh left a
+         growing band of empty black under the buttons on taller screens
+         (253px at 1080p, 602px at 1440p). */
       display: flex;
       /* Top-aligned so the content block starts high under the nav
          instead of floating in the middle of the viewport. */
@@ -376,39 +386,18 @@
       background: radial-gradient(circle, rgba(58,123,213,0.12) 0%, transparent 65%);
       pointer-events: none;
     }
-    /* Two columns: wording on the left, the 7 mark on the right.
-       .hero is display:flex, so width:100% stops this shrink-wrapping. */
+    /* .hero is display:flex, so width:100% stops this shrink-wrapping. */
     .hero__inner {
       position: relative;
       z-index: 2;
       width: 100%;
       max-width: 1320px;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) clamp(210px, 30vw, 400px);
-      gap: clamp(16px, 3vw, 48px);
-      align-items: center;
     }
-
-    /* The 7 mark. Bounded by the column width and by height, so it always
-       lands complete — never cropped, never distorted. */
-    .hero__mark {
-      justify-self: end;
-      width: auto;
-      height: auto;
-      max-width: 100%;
-      max-height: min(66vh, 600px);
-    }
-
-    /* Phone & tablet: single column — the mark drops below the buttons,
-       centered and much smaller so it reads as an accent, not a billboard. */
+    /* Holds the headline wrapping exactly where it was when the hero
+       still had a second column. */
+    .hero__copy { max-width: 830px; }
     @media (max-width: 900px) {
-      .hero__inner { grid-template-columns: 1fr; }
-      .hero__mark {
-        justify-self: center;
-        max-width: min(58vw, 230px);
-        max-height: none;
-        margin-top: 22px;
-      }
+      .hero__copy { max-width: none; }
     }
     .hero__eyebrow {
       display: inline-flex;
@@ -1108,7 +1097,7 @@
 <nav class="nav" id="mainNav">
   <div class="container nav__inner">
     <a class="nav__logo" href="#" onclick="showPage('home')">
-      <img src="images/sevens-logo.png" alt="Sevens Lacrosse" style="height:40px;width:auto;display:block" />
+      <img class="nav__logo-img" src="images/sevens-logo.png" alt="Sevens Lacrosse" />
     </a>
 
     <div class="nav__links">
@@ -1176,8 +1165,6 @@
         <a class="btn btn-outline" href="#" onclick="showPage('pricing')">See Pricing</a>
       </div>
       </div>
-
-      <img class="hero__mark" src="images/sevens-mark.png" alt="Sevens Lacrosse" />
     </div>
   </section>
 
