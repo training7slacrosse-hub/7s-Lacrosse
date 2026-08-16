@@ -350,7 +350,9 @@
       align-items: flex-start;
       position: relative;
       overflow: hidden;
-      padding: clamp(18px, 3vh, 40px) 0 56px;
+      /* Small bottom padding so the stats bar sits up close to the
+         service links, filling the space the CTA buttons used to hold. */
+      padding: clamp(18px, 3vh, 40px) 0 20px;
     }
     /* Subtle field-line grid as background texture */
     .hero::before {
@@ -447,8 +449,6 @@
       margin-bottom: 40px;
       line-height: 1.7;
     }
-    .hero__buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
-    .hero__buttons .btn { font-size: 18px; padding: 16px 32px; }
     .hero__tags {
       display: flex;
       flex-wrap: wrap;
@@ -1114,7 +1114,7 @@
       <a class="nav__link" href="#" onclick="showPage('about')">About</a>
       <a class="nav__link" href="#" onclick="showPage('pricing')">Pricing</a>
       <a class="nav__link" href="#" onclick="showPage('testimonials')">Testimonials</a>
-      <a class="btn btn-primary nav__cta" href="#" onclick="showPage('request')">Request Training</a>
+      <a class="btn btn-primary nav__cta" href="#" onclick="showPage('request')">Sign Up Today!</a>
     </div>
 
     <button class="nav__hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -1160,11 +1160,6 @@
         <li style="display:flex;align-items:center;gap:12px"><span style="color:var(--blue-light);font-size:24px;line-height:1">•</span><a href="#" onclick="showPageSection('training','performance-training')" style="font-family:var(--font-display);font-weight:700;font-size:24px;letter-spacing:0.04em;color:var(--white);text-decoration:underline;text-decoration-color:rgba(90,155,232,0.4);text-underline-offset:4px">Speed, Strength &amp; Conditioning</a></li>
         <li style="display:flex;align-items:center;gap:12px"><span style="color:var(--blue-light);font-size:24px;line-height:1">•</span><a href="#" onclick="showPage('online')" style="font-family:var(--font-display);font-weight:700;font-size:24px;letter-spacing:0.04em;color:var(--white);text-decoration:underline;text-decoration-color:rgba(90,155,232,0.4);text-underline-offset:4px">Online Training</a></li>
       </ul>
-      <div class="hero__buttons">
-        <a class="btn btn-primary" href="#" onclick="showPage('request')">Sign Up Today!</a>
-        <a class="btn btn-outline" href="#" onclick="showPage('training')">View Services</a>
-        <a class="btn btn-outline" href="#" onclick="showPage('pricing')">See Pricing</a>
-      </div>
       </div>
     </div>
   </section>
