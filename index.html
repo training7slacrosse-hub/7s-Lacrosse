@@ -589,6 +589,35 @@
       background: linear-gradient(135deg, rgba(var(--acc-rgb), 0.1) 0%, var(--card-bg) 60%);
     }
     .pband .pricing-card__badge { background: var(--acc); }
+    /* "Best value" — outline green (the site's savings color), deliberately
+       distinct from the accent-filled "Most popular" badge. */
+    .pricing-card__badge--value,
+    .pband .pricing-card__badge--value {
+      background: var(--card-bg);
+      border: 1px solid var(--green);
+      color: var(--green);
+    }
+    .pricing-card--value { border-color: rgba(52,199,108,0.4); }
+    /* Session-duration pill in band headings, tinted with the band's accent */
+    .pband__dur {
+      display: inline-block; vertical-align: -2px; margin-left: 14px;
+      font-size: 18px; font-weight: 900; letter-spacing: 0.14em;
+      text-transform: uppercase; white-space: nowrap;
+      color: var(--acc);
+      background: rgba(var(--acc-rgb), 0.12);
+      border: 2px solid rgba(var(--acc-rgb), 0.6);
+      padding: 8px 20px; border-radius: 99px;
+    }
+    @media (max-width: 560px) {
+      .pband__dur {
+        display: block; width: fit-content; margin: 10px 0 0;
+        font-size: 20px; font-weight: 900;
+        color: var(--black);
+        background: var(--acc);
+        border: 2px solid var(--acc);
+        padding: 10px 24px;
+      }
+    }
     @media (max-width: 560px) {
       .pband { padding: 40px 0; }
       .pband__head { gap: 12px; }
@@ -1640,11 +1669,9 @@
   <section class="section" style="padding-bottom:40px">
     <div class="container">
       <!-- PROMO BANNER -->
-      <div style="text-align:center;background:rgba(58,123,213,0.12);border:1px solid rgba(58,123,213,0.35);border-radius:12px;padding:12px 20px;margin-bottom:40px;color:var(--white);font-family:var(--font-display);font-weight:700;font-size:15px">⚡ Free Player Evaluation — 15 minute online consultation. <a href="#" onclick="document.getElementById('player-evaluation').scrollIntoView({behavior:'smooth',block:'center'})" style="color:var(--blue-light);text-decoration:underline;text-decoration-color:rgba(90,155,232,0.4)">Claim a spot ↓</a></div>
-
       <span class="label">Investment</span>
       <h1 style="font-size:clamp(40px,6vw,72px);margin-bottom:16px">Pricing</h1>
-      <p style="font-size:18px;color:var(--silver-mid);max-width:640px;margin-bottom:0">Training packages are designed to create consistency, structure, and progress. Packages are paid upfront before the first scheduled session.</p>
+      <p style="font-size:18px;color:var(--silver-mid);max-width:640px;margin-bottom:0">Training packages are designed to create consistency, structure, and progress. Packages are paid upfront before the first scheduled session and expire 3 months from the date of purchase.</p>
     </div>
   </section>
 
@@ -1655,28 +1682,29 @@
         <div class="pband__ico">🥍</div>
         <div class="pband__txt">
           <div class="pband__lab">Private</div>
-          <h2>Private Training — 60 Min</h2>
+          <h2>Private Training <span class="pband__dur">60 minutes</span></h2>
           <p>One-on-one coaching. Single session: $70</p>
         </div>
       </div>
 <div class="cards-grid">
       <div class="card">
         <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">6 sessions</div>
-        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$360</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">$60 per session</div>
+        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$60<span style="font-size:15px;color:var(--muted);font-weight:400"> /session</span></div>
+        <div style="font-size:14px;color:var(--silver);margin-top:6px">$360 package total</div>
         <div style="font-size:13px;color:var(--green);margin-top:4px">Save $60</div>
       </div>
       <div class="card pricing-card--featured" style="position:relative">
         <div class="pricing-card__badge">Most popular</div>
         <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">10 sessions</div>
-        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$550</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">$55 per session</div>
+        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$55<span style="font-size:15px;color:var(--muted);font-weight:400"> /session</span></div>
+        <div style="font-size:14px;color:var(--silver);margin-top:6px">$550 package total</div>
         <div style="font-size:13px;color:var(--green);margin-top:4px">Save $150</div>
       </div>
-      <div class="card">
+      <div class="card pricing-card--value" style="position:relative">
+        <div class="pricing-card__badge pricing-card__badge--value">Best value</div>
         <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">12 sessions</div>
-        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$600</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">$50 per session</div>
+        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$50<span style="font-size:15px;color:var(--muted);font-weight:400"> /session</span></div>
+        <div style="font-size:14px;color:var(--silver);margin-top:6px">$600 package total</div>
         <div style="font-size:13px;color:var(--green);margin-top:4px">Save $240</div>
       </div>
     </div>
@@ -1691,28 +1719,29 @@
         <div class="pband__ico">🥍</div>
         <div class="pband__txt">
           <div class="pband__lab">Private</div>
-          <h2>Private Training — 90 Min</h2>
+          <h2>Private Training <span class="pband__dur">90 minutes</span></h2>
           <p>Extended one-on-one session. Single session: $105</p>
         </div>
       </div>
 <div class="cards-grid">
       <div class="card">
         <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">6 sessions</div>
-        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$540</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">$90 per session</div>
+        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$90<span style="font-size:15px;color:var(--muted);font-weight:400"> /session</span></div>
+        <div style="font-size:14px;color:var(--silver);margin-top:6px">$540 package total</div>
         <div style="font-size:13px;color:var(--green);margin-top:4px">Save $90</div>
       </div>
       <div class="card pricing-card--featured" style="position:relative">
         <div class="pricing-card__badge">Most popular</div>
         <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">10 sessions</div>
-        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$850</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">$85 per session</div>
+        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$85<span style="font-size:15px;color:var(--muted);font-weight:400"> /session</span></div>
+        <div style="font-size:14px;color:var(--silver);margin-top:6px">$850 package total</div>
         <div style="font-size:13px;color:var(--green);margin-top:4px">Save $200</div>
       </div>
-      <div class="card">
+      <div class="card pricing-card--value" style="position:relative">
+        <div class="pricing-card__badge pricing-card__badge--value">Best value</div>
         <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">12 sessions</div>
-        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$960</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">$80 per session</div>
+        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$80<span style="font-size:15px;color:var(--muted);font-weight:400"> /session</span></div>
+        <div style="font-size:14px;color:var(--silver);margin-top:6px">$960 package total</div>
         <div style="font-size:13px;color:var(--green);margin-top:4px">Save $300</div>
       </div>
     </div>
@@ -1726,7 +1755,7 @@
         <div class="pband__ico">👥</div>
         <div class="pband__txt">
           <div class="pband__lab">Small Group</div>
-          <h2>7s Small Group Training — 90 Min</h2>
+          <h2>7s Small Group Training <span class="pband__dur">90 minutes</span></h2>
           <p>Price per athlete, per session. Maximum of 8 players.</p>
         </div>
       </div>
@@ -1736,38 +1765,38 @@
       <div class="card">
         <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">2 athletes</div>
         <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$45</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete / session</div>
       </div>
       <div class="card">
         <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">3 athletes</div>
         <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$40</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete / session</div>
       </div>
       <div class="card">
         <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">4 athletes</div>
         <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$35</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete / session</div>
       </div>
       <div class="card">
         <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">5 athletes</div>
         <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$30</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete / session</div>
       </div>
       <div class="card">
         <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">6 athletes</div>
         <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$30</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete / session</div>
       </div>
       <div class="card">
         <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">7 athletes</div>
         <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$25</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete / session</div>
       </div>
-      <div class="card pricing-card--featured" style="position:relative">
-        <div class="pricing-card__badge">Best value</div>
+      <div class="card pricing-card--value" style="position:relative">
+        <div class="pricing-card__badge pricing-card__badge--value">Best value</div>
         <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">8 athletes</div>
         <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$25</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:4px">per athlete / session</div>
       </div>
     </div>
     </div>
@@ -1780,28 +1809,29 @@
         <div class="pband__ico">⚡</div>
         <div class="pband__txt">
           <div class="pband__lab">Performance</div>
-          <h2>7s Performance Training — 90 Min</h2>
+          <h2>7s Performance Training <span class="pband__dur">90 minutes</span></h2>
           <p>Speed, strength, conditioning &amp; mobility. Single session: $115</p>
         </div>
       </div>
 <div class="cards-grid">
       <div class="card">
         <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">6 sessions</div>
-        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$630</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">$105 per session</div>
+        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$105<span style="font-size:15px;color:var(--muted);font-weight:400"> /session</span></div>
+        <div style="font-size:14px;color:var(--silver);margin-top:6px">$630 package total</div>
         <div style="font-size:13px;color:var(--green);margin-top:4px">Save $60</div>
       </div>
       <div class="card pricing-card--featured" style="position:relative">
         <div class="pricing-card__badge">Most popular</div>
         <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">10 sessions</div>
-        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$1,000</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">$100 per session</div>
+        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$100<span style="font-size:15px;color:var(--muted);font-weight:400"> /session</span></div>
+        <div style="font-size:14px;color:var(--silver);margin-top:6px">$1,000 package total</div>
         <div style="font-size:13px;color:var(--green);margin-top:4px">Save $150</div>
       </div>
-      <div class="card">
+      <div class="card pricing-card--value" style="position:relative">
+        <div class="pricing-card__badge pricing-card__badge--value">Best value</div>
         <div style="font-size:15px;color:var(--silver-mid);margin-bottom:6px">12 sessions</div>
-        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$1,140</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:4px">$95 per session</div>
+        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--white)">$95<span style="font-size:15px;color:var(--muted);font-weight:400"> /session</span></div>
+        <div style="font-size:14px;color:var(--silver);margin-top:6px">$1,140 package total</div>
         <div style="font-size:13px;color:var(--green);margin-top:4px">Save $240</div>
       </div>
     </div>
@@ -1822,13 +1852,13 @@
 <div class="cards-grid">
         <div class="pricing-card" style="background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px">
           <h3 style="font-family:var(--font-display);font-size:22px;color:var(--white);margin-bottom:4px">7s Online Basic</h3>
-          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:16px">$99<span style="font-size:16px;color:var(--muted);font-weight:400">/mo</span></div>
+          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:16px">$79<span style="font-size:16px;color:var(--muted);font-weight:400">/mo</span></div>
           <p style="font-size:14px;color:var(--silver-mid)">For athletes who want a personalized training plan they can complete independently.</p>
         </div>
         <div class="pricing-card pricing-card--featured" style="border-radius:var(--radius-lg);padding:32px 28px;position:relative">
           <div class="pricing-card__badge">Most popular</div>
           <h3 style="font-family:var(--font-display);font-size:22px;color:var(--white);margin-bottom:4px">7s Online Plus</h3>
-          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:16px">$129.99<span style="font-size:16px;color:var(--muted);font-weight:400">/mo</span></div>
+          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:16px">$119<span style="font-size:16px;color:var(--muted);font-weight:400">/mo</span></div>
           <p style="font-size:14px;color:var(--silver-mid)">For athletes who want personalized lacrosse, strength, and conditioning programming with ongoing coaching support.</p>
         </div>
         <div class="pricing-card" style="background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px">
@@ -1877,7 +1907,7 @@
           <div style="font-size:13px;color:var(--muted);margin-bottom:6px">Pay as you go</div>
           <h3 style="font-family:var(--font-display);font-size:20px;color:var(--white);margin-bottom:4px">Single Session</h3>
           <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:8px">$70</div>
-          <p style="font-size:14px;color:var(--silver-mid)">60 minutes ($70) or 90 minutes ($105). No commitment required.</p>
+          <p style="font-size:14px;color:var(--silver-mid)"><strong style="color:var(--blue-light);font-weight:700">60 minutes</strong> ($70) or <strong style="color:var(--blue-light);font-weight:700">90 minutes</strong> ($105). No commitment required.</p>
         </div>
       </div>
 
@@ -1892,7 +1922,7 @@
             <div class="equip-item">Zelle</div>
             <div class="equip-item">Check</div>
           </div>
-          <p class="muted mt-4">Training packages are paid upfront before the first session.</p>
+          <p class="muted mt-4">Training packages are paid upfront before the first session. Packages expire 3 months from the date of purchase. All sessions must be completed within the package period.</p>
         </div>
         <div class="card">
           <div class="card__icon">🌧️</div>
@@ -1967,7 +1997,7 @@
         <div class="pricing-card" style="background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px">
           <div style="font-size:32px;margin-bottom:12px">📋</div>
           <h3 style="font-family:var(--font-display);font-size:22px;color:var(--white);margin-bottom:6px">7s Online Basic</h3>
-          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:4px">$99<span style="font-size:16px;color:var(--muted);font-weight:400">/month</span></div>
+          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:4px">$79<span style="font-size:16px;color:var(--muted);font-weight:400">/month</span></div>
           <p style="font-size:13px;color:var(--blue-light);font-weight:600;margin-bottom:16px">For athletes who want a personalized training plan they can complete independently.</p>
           <ul style="list-style:none;padding:0">
             <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid var(--border)">✓ &nbsp;Wall ball and skill assignments</li>
@@ -1980,7 +2010,7 @@
           <div class="pricing-card__badge">Most Support</div>
           <div style="font-size:32px;margin-bottom:12px">🎯</div>
           <h3 style="font-family:var(--font-display);font-size:22px;color:var(--white);margin-bottom:6px">7s Online Plus</h3>
-          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:4px">$129.99<span style="font-size:16px;color:var(--muted);font-weight:400">/month</span></div>
+          <div style="font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--white);margin-bottom:4px">$119<span style="font-size:16px;color:var(--muted);font-weight:400">/month</span></div>
           <p style="font-size:13px;color:var(--blue-light);font-weight:600;margin-bottom:16px">For athletes who want personalized lacrosse, strength, and conditioning programming with ongoing coaching support.</p>
           <ul style="list-style:none;padding:0">
             <li style="font-size:14px;color:var(--silver-mid);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.08)">✓ &nbsp;Personalized lacrosse training plan</li>
@@ -2226,6 +2256,11 @@
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">What is your cancellation policy? <span class="faq-q__icon">+</span></button>
           <div class="faq-a">We ask for at least 24 hours' notice for cancellations. Sessions cancelled with less notice may still be charged to cover the coach's time.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How long do training packages last? <span class="faq-q__icon">+</span></button>
+          <div class="faq-a">Packages expire 3 months from the date of purchase. All sessions must be completed within the package period.</div>
         </div>
 
         <div class="faq-item">
